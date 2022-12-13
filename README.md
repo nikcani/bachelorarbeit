@@ -118,3 +118,12 @@ https://gitlab.com/graw-radiosondes/sounding-console
 is a large set of rules about which I could write a separate article. These are the basic principles that we should
 follow when creating object design and responsibility assignments. It consists of: Information Expert, Controller,
 Creator, High Cohesion, Low Coupling, Pure Fabrication, Polymorphism, Protected Variations, Indirection.
+
+# Vergleich
+
+- SOLID Principles
+- Maturity
+- Prototypische Erfahrungen
+  - konkret: können die Probleme mit der Flight View optimiert werden?
+- Features
+- Verfügbare Erweiterungen
