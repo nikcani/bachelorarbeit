@@ -59,7 +59,7 @@ https://gitlab.com/graw-radiosondes/sounding-console
 
 > https://nova.laravel.com/releases
 
-- first release: 2018-08-22
+- first stable release: 2018-08-22
 - major versions: 4
 
 ### Age: filament
@@ -122,8 +122,44 @@ Creator, High Cohesion, Low Coupling, Pure Fabrication, Polymorphism, Protected 
 # Vergleich
 
 - SOLID Principles
+- PSR Compliance
+- KISS Principle
+- DRY Principle
 - Maturity
 - Prototypische Erfahrungen
   - konkret: können die Probleme mit der Flight View optimiert werden?
-- Features
+- Umfang der Features
+  - Quantität
+  - Qualität
 - Verfügbare Erweiterungen
+  - Quantität
+  - Qualität
+
+# Fragen für Termin
+- Wie bewertet man Maturity?
+  - Technologiereifegrad: technology readyness level
+  - bekannte Fehler bzw. ungelöste Probleme
+  - Stärke der Dokumentation
+  - Roadmap
+  - wie aktiv wird entwickelt
+  - Anzahl der aktuellen Nutzer
+    - github stars
+    - github forks
+    - oder so
+  - werden moderne Sprachfeatures genutzt
+- Welche Design Patterns für den Vergleich heranziehen?
+  - hier ist ein Problem: wurde das mit Muster gelöst
+  - sind Muster dokumentiert
+  - ein Muster oder viele Muster
+  - sind Muster angemessen eingesetzt
+  - Qualität wichtiger Quantität
+  - Erich Gammer et al Entwurfsmuster (richard helm)
+  - pattern oriented software architecture (frank buschmann, regine meunier)
+- clean code literatur nach robert martin
+- muster quantitativ bewerten
+  - bei einem muster mal qualitativ in die tiefe gehen
+- wie streng getyped sind die frameworks
+
+# Nächster Termin
+- ungefähre gliederung
+- storyline für vergleich
