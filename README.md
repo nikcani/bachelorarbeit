@@ -126,6 +126,8 @@ Creator, High Cohesion, Low Coupling, Pure Fabrication, Polymorphism, Protected 
 - KISS Principle
 - DRY Principle
 - Maturity
+  - https://www.google.com/search?client=firefox-b-d&q=software+maturity+levels
+  - https://www.google.com/search?client=firefox-b-d&q=software+maturity+levels
 - Prototypische Erfahrungen
   - konkret: können die Probleme mit der Flight View optimiert werden?
 - Umfang der Features
