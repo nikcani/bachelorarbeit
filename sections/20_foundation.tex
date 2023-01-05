@@ -1,1 +1,44 @@
 \section{Grundlagen}
+Die theoretische Basis für den Vergleich bieten verschiedene Software Design Principles und Patterns, welche
+im Folgenden eingeführt werden.
+
+\subsection{Principles}
+Software Design Principles sind weder Regeln, Gesetze noch perfekte Wahrheiten.
+Stattdessen sind diese Prinzipien Empfehlungen bzw.\ Ratschläge.
+(Vgl.~\cite{getting-a-solid-start})
+
+Software Design Prinzipien sind Heuristiken und allgemeingültige Lösungen für übliche Probleme.
+Sie wurden empirisch beobachtet und gelten daher meistens, allerdings auch nicht unbedingt immer.
+(Vgl.~\cite{getting-a-solid-start})
+
+\subsubsection{SOLID Principles}
+Die Kerngruppe der Software Design Prinzipien werden von Robert C. Martin unter dem Titel \enquote{The Principles of OOD}(\cite{solid}) beschrieben.
+Die Grundlage dafür legte er in seinem Paper \enquote{Design Principles and Design Patterns}(\cite{design-principles-and-design-patterns}) im Jahr 2000.
+
+\paragraph{Single Responsibility Principle}
+\enquote{A class should have one, and only one, reason to change.}(\cite{solid})
+
+\paragraph{Open Closed Principle}
+\enquote{You should be able to extend a classes' behavior, without modifying it.}(\cite{solid})
+
+\paragraph{Liskov Substitution Principle}
+\enquote{Derived classes must be substitutable for their base classes.}(\cite{solid})
+
+\paragraph{Interface Segregation Principle}
+\enquote{Make fine-grained interfaces that are client specific.}(\cite{solid})
+
+\paragraph{Dependency Inversion Principle}
+\enquote{Depend on abstractions, not on concretions.}(\cite{solid})
+
+\subsection{Patterns}
+Patterns, sogenannte Entwurfsmuster, wurden ursprünglich vom Architekten Christopher Alexander geprägt.
+Dieser beschrieb in seinem Buch \enquote{A Pattern Language: Towns, Buildings, Construction}(\cite{a-pattern-language}) im Jahr 1977 zum ersten Mal Muster, unter dessen Einsatz man immer wiederkehrende Probleme lösen kann.
+In der Informatik wurden Entwurfsmuster durch die Veröffentlichung der \enquote{Gang of Four} im Jahr 1994 populärer.
+In ihrem Buch \enquote{Design Patterns - Elements of Reusable Object-Oriented Software}(\cite{gamma-design-patterns}) beschreiben Erich Gamma et al.\ 23 unterschiedliche Entwurfsmuster.
+Diese sind eingeteilt in die drei Kategorien Creational, Structural und Behavioral.
+
+1999 ergänzte Martin Fowler in \enquote{Patterns of Enterprise Application Architecture}(\cite{patterns-of-enterprise-application-architecture}) die Kategorie \enquote{Objektrelationale Abbildung} und dazugehörige Muster.
+Gregor Hohpe und Bobby Woolf ergänzten 2003 die Kategorie der Messaging Patterns in ihrem Buch \enquote{Enterprise Integration Patterns}(\cite{enterprise-integration-patterns}).
+
+Die Menge der Entwurfsmuster ist so umfangreich, dass eine wiedergabe aller an dieser Stelle weder von Nutzen noch machbar wäre.
+Im Folgenden werden daher nur die Muster eingeführt, die im anschließenden Vergleich verwendet werden.
