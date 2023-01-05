@@ -1,0 +1,73 @@
+\begin{table}[]
+    \begin{tabular}{llllll}
+        \textbf{Category}                        & Feature                & 10 & Nova                            & 33 & Filament                                 \\
+        \multirow{2}{*}{\textbf{Technical}}      & Laravel Support        & n  & \textgreater{}= 8.0             & n  & \textgreater{}= 8.0                      \\
+        & PHP Support            & g  & \textgreater{}= 7.3             & n  & \textgreater{}= 8.0                      \\
+        \multirow{10}{*}{\textbf{Ressources}}    & Number of fields       & g  & 38                              & b  & 16                                       \\
+        & Computed fields        & g  & yes                             & g  & yes                                      \\
+        & Repeater fields        & b  & no                              & g  & supported                                \\
+        & Builder fields         & b  & no                              & g  & supported                                \\
+        & Table polling          & n  & yes, but bad animation          & g  & yes                                      \\
+        & Filters                & g  & supported                       & g  & supported                                \\
+        & Lenses                 & g  & supported                       & b  & no                                       \\
+        & Actions                & n  & title, fields \& responses      & g  & title, fields, responses \& custom views \\
+        & Queued Actions         & g  & supported                       & n  & only custom                              \\
+        & Action log             & g  & supported                       & b  & no                                       \\
+        \multirow{3}{*}{\textbf{Custom views}}   & Custom pages/Tools     & n  & complicated but powerful        & g  & simple and powerful                      \\
+        & Custom resource pages  & b  & no                              & g  & yes                                      \\
+        & Widgets/Cards          & n  & complicated but powerful        & g  & simple and powerful                      \\
+        \multirow{12}{*}{\textbf{Search}}        & Searchable Columns     & g  & can be defined                  & g  & can be defined                           \\
+        & Title                  & g  & can be defined                  & g  & can be defined                           \\
+        & Details/Subtitle       & g  & can be defined                  & g  & can be defined                           \\
+        & Url                    & b  & no                              & g  & can be defined                           \\
+        & Actions                & b  & no                              & g  & can be defined                           \\
+        & Full-Text Indexes      & g  & supported                       & b  & no                                       \\
+        & Searching Relations    & g  & supported                       & b  & not clear, propably not supported        \\
+        & Searching JSON Data    & g  & supported                       & b  & not clear, propably not supported        \\
+        & Limits                 & g  & supported                       & b  & no                                       \\
+        & Debounce timing        & g  & supported                       & b  & no                                       \\
+        & Global disable         & g  & supported                       & b  & no                                       \\
+        & Laravel Scout          & g  & supported                       & b  & no                                       \\
+        \multirow{15}{*}{\textbf{Metrics}}       & Value                  & g  & avg/sum/max/min                 & n  & yes, but no predefined functions         \\
+        & Trend/Line             & g  & count/avg/sum/max/min           & n  & yes, but no predefined functions         \\
+        & Bar                    & b  & no                              & g  & yes                                      \\
+        & Bubble                 & b  & no                              & g  & yes                                      \\
+        & Polar Area             & b  & no                              & g  & yes                                      \\
+        & Radar                  & b  & no                              & g  & yes                                      \\
+        & Scatter                & b  & no                              & g  & yes                                      \\
+        & Partition/Pie/Doughnut & g  & avg/sum/max/min                 & n  & yes, but no predefined functions         \\
+        & Progress               & g  & count/sum                       & b  & no                                       \\
+        & Custom chart control   & b  & no                              & g  & yes, configure the chart.js options      \\
+        & Table                  & n  & icon, title, subtitle \& action & g  & multiple columns, filters \& actions     \\
+        & Ranges                 & g  & can be defined                  & g  & can be defined                           \\
+        & Caching                & g  & supported                       & b  & no                                       \\
+        & Formatting             & n  & possible but limited            & g  & possible                                 \\
+        & Polling                & n  & some events                     & g  & interval                                 \\
+        \multirow{3}{*}{\textbf{Dashboard}}      & widget width           & n  & yes                             & g  & yes, responsive                          \\
+        & grid col number        & b  & no                              & g  & yes, responsive                          \\
+        & conditionally hiding   & g  & yes                             & g  & yes                                      \\
+        \multirow{5}{*}{\textbf{Notifications}}  & Content                & n  & title, action, icon \& type     & g  & title, body, action, icon \& type        \\
+        & Global disable         & g  & supported                       & b  & no                                       \\
+        & Duration               & b  & no                              & g  & supported                                \\
+        & Persistent             & b  & no                              & g  & supported                                \\
+        & Custom view            & b  & no                              & g  & supported                                \\
+        \multirow{2}{*}{\textbf{Navigation}}     & Customize Main Menu    & g  & yes                             & g  & yes                                      \\
+        & Customize User Menu    & g  & yes                             & g  & yes                                      \\
+        \multirow{10}{*}{\textbf{Customization}} & Logo                   & n  & only SVG file                   & g  & custom view                              \\
+        & Dark Mode              & n  & switch can be disabled          & g  & mode and switch can be enabled           \\
+        & Collapsible sidebar    & b  & no                              & g  & yes                                      \\
+        & Themes                 & n  & colors can be changed           & g  & full theme can be extended               \\
+        & Max content width      & b  & no                              & g  & changable globally or per page           \\
+        & Custom Assets          & n  & only by overwriting the layout  & g  & hooks to register styles/scripts         \\
+        & Meta tags              & n  & only by overwriting the layout  & g  & yes, via hook                            \\
+        & Notification position  & b  & no                              & g  & vertical and horizontal alignment        \\
+        & Render hooks           & b  & no                              & g  & add custom views in 28 places            \\
+        & Footer                 & n  & only text                       & g  & custom view                              \\
+        \multirow{3}{*}{\textbf{Plugins}}        & Total                  & n  & 816                             & n  & 158                                      \\
+        & Current                & g  & 161                             & g  & 158                                      \\
+        & Repository             & n  & third-party                     & g  & firts-party                              \\
+        \multirow{3}{*}{\textbf{Other}}          & Impersonation          & g  & yes                             & b  & no                                       \\
+        & Localization           & g  & yes                             & g  & yes                                      \\
+        & Modal resources        & b  & no                              & g  & yes
+    \end{tabular}
+\end{table}
