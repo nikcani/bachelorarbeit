@@ -49,6 +49,16 @@ jobs:
           tag_name: runid-${{ github.run_id }}
           release_name: Release No. ${{ github.run_number }} at ${{ steps.date.outputs.date }}
 
+      - name: Delete Release Assets
+        if: ${{ always() }}
+        id: delete-release-asset
+        uses: mknejp/delete-release-assets@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: runid-${{ github.run_id }}
+          assets: |
+            *.zip
+
       #- name: Upload Release Asset
       #  if: ${{ always() }}
       #  id: upload-release-asset
