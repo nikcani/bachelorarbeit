@@ -48,8 +48,6 @@ jobs:
         with:
           tag_name: runid-${{ github.run_id }}
           release_name: Release No. ${{ github.run_number }} at ${{ steps.date.outputs.date }}
-          draft: false
-          prerelease: false
 
       #- name: Upload Release Asset
       #  if: ${{ always() }}
