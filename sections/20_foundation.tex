@@ -50,11 +50,13 @@ Die PHP-FIG regelt auch weitere Standards, wie zum Beispiel Logger Interfaces, A
 (Vgl.~\cite{psr})
 
 \subsubsection{KISS (Keep It Simple Stupid)}
-\begin{itemize}
-    \item Don't complicate the code.
-    \item The code should be its documentation itself.
-    \item Any new programmer on the team should be able to get into the project quickly.
-\end{itemize}
+Das KISS Prinzip wurde ursprünglich im amerikanischen Militär geprägt und ist zurückzuführen auf Kelly Johnson.
+(Vgl.~\cite{kelly-johnson-memoir})
+
+Im Bereich Software Design sollen Systeme möglichst einfach, bestehend aus möglichst wenigen Teilen, gebaut werden.
+Ebenso sollen Abhängigkeiten und interne Verbindungen reduziert werden.
+Außerdem soll die Codebasis so gestaltet werden, dass andere Entwickler, auch Anfänger, sie verändern können.
+(Vgl.~\cite{kiss-principle-explained})
 
 \subsubsection{DRY (Don’t Repeat Yourself)}
 Den selben Code immer und immer wieder zu wiederholen ist nicht erstrebenswert.
@@ -65,15 +67,14 @@ Dadurch wird zum einen der Code insgesamt kürzer, zum anderen werden Wartungen 
 Beim Einsatz von Frameworks ist zu beachten, dass diese oft an mehreren Stellen dieselben Konfigurationen benötigen.
 Wenn zum Beispiel bei zu erstellenden Klassen ein oder mehrere Attribute auf denselben Wert gesetzt werden sollen, dann bietet es sich an, eine Oberklasse zu erstellen die diese Konfiguration bereits setzt.
 
-\subsubsection{YAGNI (You Aren’t Gonna Need It)}
-We should not write code “for the future”.
+\subsubsection{YAGNI (You aren't gonna need it)}
+Eine Implementierung sollte immer nur dann erfolgen, wenn sie konkret notwendig ist.
+Wenn lediglich vorhersehbar ist, dass eine gewisse Funktion notwendig sein wird, dann sollte sie noch nicht implementiert werden.
+(Vgl.~\cite{extreme-programming-installed})
 
-Such code is not needed at the moment.
-
-\subsubsection{GRASP (General Responsibility Assignment Software Patterns)}
-GRASP is a large set of rules about which I could write a separate article.
-These are the basic principles that we should follow when creating object design and responsibility assignments.
-It consists of: Information Expert, Controller, Creator, High Cohesion, Low Coupling, Pure Fabrication, Polymorphism, Protected Variations, Indirection.
+Dieser Grundsatz wurde im Bereich des Extreme Programming geprägt.
+Begründet sieht er sich darin, dass es sich nur selten lohnt, für zukünftige Anforderungen zu entwickeln.
+(Vgl.~\cite{kiss-principle-explained})
 
 \subsection{Patterns}
 Patterns, sogenannte Entwurfsmuster, wurden ursprünglich vom Architekten Christopher Alexander geprägt.
