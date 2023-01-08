@@ -19,18 +19,28 @@ https://accesto.com/blog/solid-php-solid-principles-in-php/
 
 \newlineparagraph{Single Responsibility Principle}
 \enquote{A class should have one, and only one, reason to change.}\cite{solid}
+Eine Klasse sollte immer so designt werden, dass sie nur einen Zweck erfüllt\cite{different-types-of-software-design-principles}.
 
-\newlineparagraph{Open Closed Principle}
+\newlineparagraph{Open Closed Plurinciple}
 \enquote{You should be able to extend a classes' behavior, without modifying it.}\cite{solid}
+Fertige Klassen sollten nicht mehr verändert werden, lediglich Bugs sollten behoben werden\cite{different-types-of-software-design-principles}.
+Allerdings sollte es immer möglich sein, die Funktionalität zu erweitern\cite{different-types-of-software-design-principles}.
 
 \newlineparagraph{Liskov Substitution Principle}
 \enquote{Derived classes must be substitutable for their base classes.}\cite{solid}
+Eine Unterklasse sollte immer genau wie die Oberklasse verwendet werden können, die sie erweitert\cite{different-types-of-software-design-principles}.
 
 \newlineparagraph{Interface Segregation Principle}
 \enquote{Make fine-grained interfaces that are client specific.}\cite{solid}
+Interfaces sollten genau wie Klassen möglichst spezifisch sein.
+Ansonsten würden die implementierenden Klassen gegen das Single Responsibility Principle verstoßen.
+(Vgl.~\cite{design-patterns-php-laravel})
 
 \newlineparagraph{Dependency Inversion Principle}
 \enquote{Depend on abstractions, not on concretions.}\cite{solid}
+Für eine möglichst lose Kopplung zwischen konkreten Klassen sollte man sich auf Interfaces und abstrakte Klassen verlassen.
+So wird eine flexiblere Codebase ermöglicht.
+(Vgl.~\cite{design-patterns-php-laravel})
 
 \subsubsection{KISS (Keep It Simple Stupid)}
 Das KISS Prinzip wurde ursprünglich im amerikanischen Militär geprägt und ist zurückzuführen auf Kelly Johnson.
