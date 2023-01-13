@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt update
 RUN apt -y install texlive-latex-recommended
 RUN apt -y install texlive-latex-extra
