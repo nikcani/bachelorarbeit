@@ -87,6 +87,16 @@ Diese konnte allerdings überwunden werden, es musste lediglich auf ein neues Ko
 tbd
 
 \subsubsection{Implizit versus explizit}
-siehe community: nova ist etwas schneller, felder in filament zu konfigurieren ist expliziter und dadurch aufwändiger
+Die prototypischen Erfahrung entsprechen denen, über die andere Entwickler\cite{reddit-laravel-nova-vs-filament} bereits berichten.
+Nova arbeitet impliziter als filament.
+Man definiert Felder an einer Stelle, diese gelten dann sowohl für das Formular, als auch für die Tabelle.
+Bei filament definiert man ein Feld mindestens an zwei Stellen.
 
-tbd
+Grundsätzlich erwartet filament, dass für jede eigene Tabelle die Spalten erneut explizit definiert werden.
+Dies lässt sich allerdings umgehen, indem man einfach die Tabelle aus der Ressource referenziert.
+
+Die unterschiedlichen Ansätze haben ihre Vor- und Nachteile.
+Der implizite Ansatz bei Nova ist schneller, insbesondere am Anfang.
+Filaments explizite Definitionen benötigen initial mehr Zeit, überzeugen aber am Ende durch eine bessere und einfachere Anpassbarkeit.
+Außerdem ist es durchaus sinnvoll, dass man explizit formuliert, wie die Felder im Formular und wie sie in Tabellen dargestellt werden.
+So wird verhindert, dass unerwartete Fälle eintreten, da mindestens einmal während der Entwicklung durchdacht werden muss, wie jeder Fall explizit definiert wird.
