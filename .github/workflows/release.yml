@@ -57,7 +57,7 @@ jobs:
 
       - name: Upload Log
         if: ${{ always() }}
-        id: upload-release-asset
+        id: upload-log
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
