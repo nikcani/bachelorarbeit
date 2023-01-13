@@ -43,30 +43,45 @@ Längeres Scrollen entfällt und die Ansicht bleibt kompakt und übersichtlich.
 Filament überzeugt durch die flexible und umfangreiche Anpassbarkeit.
 
 \newlineparagraph{Generelle Anpassbarkeit}
-tbd
+Filament punktet, durch eine generell flexiblere Anpassbarkeit.
+Die Styles lassen sich besser anpassen.
+Des Weiteren gibt es die Möglichkeit, an vielen Stellen individuelle Views einzuhängen.
 
 \newlineparagraph{Ladeanimation der aktualisierenden Tabelle}
-tbd
+Filament zeigt keine Ladeanimation an, wenn die Tabelle neue Daten pollt.
+Dadurch ist ein einfacher Vergleich der Werte möglich und die Seite springt nicht.
+Die Seite springt nur, wenn neue Einträge hinzukommen.
+Insgesamt ist die User Experience durch diese Animation bei filament wesentlich besser als bei Nova.
 
 \newlineparagraph{Livewire Polling (Flight Dashboard Component)}
-tbd
+Filament basiert auf Livewire\cite{livewire} und daher können innerhalb einer individuellen Komponente auch Funktionen von Livewire genutzt werden.
+So gibt es einen eingebauten Polling Mechanismus.
+Man fügt lediglich ein Attribut zu einem HTMl Objekt hinzu und Livewire ruft dieses in einem definierbaren Interval erneut vom Server ab.
+
+So wurde die Implementierung des Dashboards eines laufenden Fluges vereinfacht.
+Die Api und manuelles Polling mit anschließendem Austausch der Datenbasis, sodass Vue.js den Inhalt dann reaktiv updaten kann, wird nicht mehr benötigt.
+Es muss nur innerhalb der Blade Komponente mit serverseitigem Code das Dashboard generiert werden und Livewire übernimmt den Rest vollautomatisch.
 
 \newlineparagraph{Styling von Custom Components}
-tbd
+Nova unterstützt explizit die Verwendung der Blade Components.
+So können fertige Funktionen und einheitliche Stile wiederverwendet werden.
+Bei der Sounding Console werden beispielsweise Widgets als fertige Komponente geladen.
 
 \newlineparagraph{Infinite Loading Tables}
-Better Performance with many rows.
+Filament schafft es eine benutzbare UI mit mehreren tausenden geladenen und angezeigten Zeilen in einer Tabelle zu rendern.
+Damit ist im Gegensatz zu Nova kein Infinite Load/Scroll Pattern notwendig.
 
-Can show ALL rows instead of infinite load.
-
-tbd
+Außerdem zeigt filament standardmäßig auch eine \enquote{All} Option für die Pagination an.
+Dadurch kann eine zu nativen Anwendungen vergleichbare UI erstellt werden in welcher der User durch die gesammte Tabelle scrollen kann.
 
 \newlineparagraph{Tabellensortierung}
-tbd
+Nachdem man bei filament eine Spalte als sortierbar definierbar hat, kann man für eine Ansicht ebenfalls eine Standardsortierung angeben.
+Dabei ist sowohl die Angabe der Spalte möglich, als auch die Sortierrichtung.
+Das Problem mit Nova wird, durch diese implementierte Lösung, vollständig gelöst.
 
 \subsubsection{Negative Erfahrungen}
 Trotz aller positiven Erfahrungen gab es auch eine Hürde mit filament.
-Diese konnte allerdings überwunden werden, es musste lediglich auf eine neues Konzept umgestellt werden.
+Diese konnte allerdings überwunden werden, es musste lediglich auf ein neues Konzept umgestellt werden.
 
 \newlineparagraph{Livewire Polling (Map Component)}
 tbd
