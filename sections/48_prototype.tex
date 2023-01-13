@@ -18,7 +18,29 @@ Ausgewählte Filter werden oberhalb der Tabelle dargestellt.
 Bei Nova versteckt sich dies erst hinter einem Klick in einem Popup.
 
 \newlineparagraph{Flight View Anpassbarkeit}
-tbd
+Manche Ansichten benötigen weitreichende Anpassungen, so vor allem die Ansicht eines vergangenen Fluges.
+Bei laufenden Flügen wird lediglich ein Dashboard mit aktuellen Werten und eine Karte angezeigt.
+Beides passt sinnvoll oberhalb der restlichen Komponenten der Ressource, den Stammdatenfeldern und der Messwertetabelle.
+
+Im Fall von vergangenen Flügen fällt das Dashboard weg, jedoch kommen ein Messdatendiagramm, eine Statistikübersicht und ein Skew-T-Diagramm hinzu.
+Insgesamt zu viele und zu große Komponenten, um diese direkt oberhalb auf der Seite zu platzieren.
+Ein User müsste zu viel scrollen, um alles zu erfassen, dies wäre unübersichtlich und ineffizient.
+
+Nova bietet kaum Möglichkeiten eine Ansicht anzupassen.
+Daher war die beste Variante, die Komponenten in Unterpunkte auszulagern.
+Nova unterstützt sogenannte Tools, welche eigenständige Seiten sind, auf denen individuelle Komponenten implementiert werden können.
+Außerdem kann kontextabhängig das Menü angepasst werden.
+Tests erster Nutzer innerhalb des Teams zeigten allerdings, dass die entworfene Navigationsstruktur zu unübersichtlich ist.
+
+Filament bietet gegenüber Nova weitaus mehr Möglichkeiten, eine Ansicht individuell anzupassen.
+So kann bei der vorliegenden Herausforderung eine individuelle View für den Header angegeben werden.
+Diese wird oberhalb aller anderen Komponenten auf der Ansichtsseite eines Fluges gerendert.
+Innerhalb dieser individuellen View kann dann eine Tab View implementiert werden, die immer nur eine größere Komponente auf einmal anzeigt.
+
+Die Lösung mit filament überzeugt durch eine deutlich bessere User Experience.
+Die komplizierte Navigationsstruktur im Menü entfällt komplett und alles findet direkt innerhalb der Flugansicht statt.
+Längeres Scrollen entfällt und die Ansicht bleibt kompakt und übersichtlich.
+Filament überzeugt durch die flexible und umfangreiche Anpassbarkeit.
 
 \newlineparagraph{Generelle Anpassbarkeit}
 tbd
