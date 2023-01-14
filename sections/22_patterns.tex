@@ -14,10 +14,20 @@ Im Folgenden werden daher nur die Muster eingeführt, die im anschließenden Ver
 \subsubsection{MVC (Model-View-Controller)}
 \color{red}
 Dieses architektonische Pattern teilt eine interaktive Anwendung in drei Komponenten auf.
+Durch eine klare Trennung der Zuständigkeiten werden Wartungen einfacher und können besser auf unterschiedliche Entwickler aufgeteilt werden.
+Das Model ist nur zuständig für Daten und Business Logic, die View hingegen, nur für die Darstellung der Inhalte (\ref{fig:mvc})).
+Der Controller ist das Bindeglied und routet Daten und Befehle zwischen den anderen beiden Bereichen.
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
 tbd
 \color{black}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Model View Controller}
+    \label{fig:mvc}
+    \includegraphics[scale=0.15]{assets/wikipedia_mvc_process}
+\end{figure}
 
 \subsubsection{GRASP (General Responsibility Assignment Software Patterns)}
 \color{red}
