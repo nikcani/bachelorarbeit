@@ -15,14 +15,29 @@ Die Grundlage dafür legte er in seinem Paper \enquote{Design Principles and Des
 \enquote{A class should have one, and only one, reason to change.}\cite{solid}
 Eine Klasse sollte immer so designt werden, dass sie nur einen Zweck erfüllt\cite{different-types-of-software-design-principles}.
 
+\color{red}
+Ziel definieren im Projektkontext
+\color{black}
+
 \newlineparagraph{Open Closed Principle}
 \enquote{You should be able to extend a classes' behavior, without modifying it.}\cite{solid}
-Fertige Klassen sollten nicht mehr verändert werden, lediglich Bugs sollten behoben werden\cite{different-types-of-software-design-principles}.
-Allerdings sollte es immer möglich sein, die Funktionalität zu erweitern\cite{different-types-of-software-design-principles}.
+Fertige Klassen sollten nicht mehr verändert werden, lediglich Bugs sollten behoben werden.
+Allerdings sollte es immer möglich sein, die Funktionalität zu erweitern.
+Dafür ist es wichtig, dass die Klassen so entworfen sind, dass Unterklassen die Funktionalität durch Overwrites nicht einschränken können.
+Dafür müssen vor allem relevante Typen definiert werden und wichtige und finale Methoden auch als solche markiert werden, damit diese nicht mehr verändert werden können.
+(Vgl.~\cite{different-types-of-software-design-principles})
+
+\color{red}
+Ziel definieren im Projektkontext
+\color{black}
 
 \newlineparagraph{Liskov Substitution Principle}
 \enquote{Derived classes must be substitutable for their base classes.}\cite{solid}
 Eine Unterklasse sollte immer genau wie die Oberklasse verwendet werden können, die sie erweitert\cite{different-types-of-software-design-principles}.
+
+\color{red}
+Ziel definieren im Projektkontext
+\color{black}
 
 \newlineparagraph{Interface Segregation Principle}
 \enquote{Make fine-grained interfaces that are client specific.}\cite{solid}
@@ -30,11 +45,19 @@ Interfaces sollten genau wie Klassen möglichst spezifisch sein.
 Ansonsten würden die implementierenden Klassen gegen das Single Responsibility Principle verstoßen.
 (Vgl.~\cite{design-patterns-php-laravel})
 
+\color{red}
+Ziel definieren im Projektkontext
+\color{black}
+
 \newlineparagraph{Dependency Inversion Principle}
 \enquote{Depend on abstractions, not on concretions.}\cite{solid}
 Für eine möglichst lose Kopplung zwischen konkreten Klassen sollte man sich auf Interfaces und abstrakte Klassen verlassen.
 So wird eine flexiblere Codebase ermöglicht.
 (Vgl.~\cite{design-patterns-php-laravel})
+
+\color{red}
+Ziel definieren im Projektkontext
+\color{black}
 
 \subsubsection{KISS (Keep It Simple Stupid)}
 Das KISS Prinzip wurde ursprünglich im amerikanischen Militär geprägt und ist zurückzuführen auf Kelly Johnson.
