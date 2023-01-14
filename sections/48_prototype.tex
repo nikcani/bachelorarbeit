@@ -84,9 +84,12 @@ Trotz aller positiven Erfahrungen gab es auch eine Hürde mit filament.
 Diese konnte allerdings überwunden werden, es musste lediglich auf ein neues Konzept umgestellt werden.
 
 \newlineparagraph{Livewire Polling (Map Component)}
-\color{red}
-tbd
-\color{black}
+Das Livewire Polling Konzept ist nicht immer von Vorteil.
+Bei einfachen Komponenten ist es sinnvoll, bei komplexeren Komponenten wie zum Beispiel der Karte, ist es jedoch ein Problem.
+Mit Nova war die Umsetzung etwas einfacher, da individuelle Nova Komponenten bereits eine geschützte HTTP Api vorbereiten, über die Updates regelmäßig abgerufen werden können.
+Das Polling der gesamten Komponente ist mit filament keine Option, dennoch müssen Veränderungen erkannt und automatisch angezeigt werden.
+Durch \enquote{wire:ignore} können allerdings einzelne Bestandteile ausgenommen werden.
+So wird die Karte und das dazugehörige Script nicht erneut geladen, sondern nur ein Teil, welcher bei einem Update ein Event aussendet, auf welches die Karte dann reagiert.
 
 \subsubsection{Implizit versus explizit}
 Die prototypischen Erfahrung entsprechen denen, über die andere Entwickler\cite{reddit-laravel-nova-vs-filament} bereits berichten.
