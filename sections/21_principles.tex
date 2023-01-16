@@ -1,10 +1,10 @@
 \subsection{Principles}
 Software Design Principles sind weder Regeln, Gesetze noch perfekte Wahrheiten.
-Stattdessen sind diese Prinzipien Empfehlungen bzw.\ Ratschläge.
+Vielmehr sind sie als Empfehlungen oder Ratschläge zu verstehen.
 (Vgl.~\cite{getting-a-solid-start})
 
-Software Design Prinzipien sind Heuristiken und allgemeingültige Lösungen für übliche Probleme.
-Sie wurden empirisch beobachtet und gelten daher meistens, allerdings auch nicht unbedingt immer.
+Software Design Principles sind Heuristiken, die als allgemeingültige Lösungen für übliche Probleme nutzbar sind.
+Sie wurden empirisch beobachtet und gelten meistens, allerdings nicht zwingend.
 (Vgl.~\cite{getting-a-solid-start})
 
 \subsubsection{SOLID Principles}
@@ -24,7 +24,7 @@ Ziel definieren im Projektkontext
 Fertige Klassen sollten nicht mehr verändert werden, lediglich Bugs sollten behoben werden.
 Allerdings sollte es immer möglich sein, die Funktionalität zu erweitern.
 Dafür ist es wichtig, dass die Klassen so entworfen sind, dass Unterklassen die Funktionalität durch Overwrites nicht einschränken können.
-Dafür müssen vor allem relevante Typen definiert werden und wichtige und finale Methoden auch als solche markiert werden, damit diese nicht mehr verändert werden können.
+Dafür ist es erforderlich relevante Typen zu definieren und wichtige und finale Methoden auch als solche zu markieren, damit diese nicht mehr verändert werden können.
 (Vgl.~\cite{different-types-of-software-design-principles})
 
 \color{red}
@@ -44,7 +44,7 @@ Ziel definieren im Projektkontext
 \newlineparagraph{Interface Segregation Principle}
 \enquote{Make fine-grained interfaces that are client specific.}\cite{solid}
 Interfaces sollten genau wie Klassen möglichst spezifisch sein.
-Ansonsten würden die implementierenden Klassen gegen das Single Responsibility Principle verstoßen.
+Diese Theorie zielt darauf, dass die implementierenden Klassen nicht gegen das Single Responsibility Principle verstoßen.
 (Vgl.~\cite{design-patterns-php-laravel})
 
 \color{red}
@@ -67,27 +67,27 @@ Ziel definieren im Projektkontext
 Das KISS Prinzip wurde ursprünglich im amerikanischen Militär geprägt und ist zurückzuführen auf Kelly Johnson.
 (Vgl.~\cite{kelly-johnson-memoir})
 
-Im Bereich Software Design sollen Systeme möglichst einfach, bestehend aus möglichst wenigen Teilen, gebaut werden.
+Im Bereich Software Design wird sich darauf bezogen, dass Systeme möglichst einfach gebaut und aus möglichst wenigen Teilen bestehen sollen.
 Ebenso sollen Abhängigkeiten und interne Verbindungen reduziert werden.
-Außerdem soll die Codebasis so gestaltet werden, dass andere Entwickler, auch Anfänger, sie verändern können.
+Zudem soll die Codebasis so gestaltet werden, dass weitere Entwickler, auch Anfänger, die Möglichkeit haben, sie verändern zu können.
 (Vgl.~\cite{kiss-principle-explained})
 
 \subsubsection{DRY (Don’t Repeat Yourself)}
 Denselben Code immer und immer wieder zu wiederholen ist nicht erstrebenswert.
-Wenn Wiederholungen bemerkt werden, sollten sie immer in Methoden oder andere geeignete Strukturen ausgelagert werden.
-Dadurch wird zum einen der Code insgesamt kürzer, zum anderen werden Wartungen einfacher.
+Werden Wiederholungen bemerkt, sollten sie in Methoden oder andere geeignete Strukturen ausgelagert werden.
+Auf diese Weise wird der Code insgesamt kürzer und Wartungen werden einfacher.
 (Vgl.~\cite{the-pragmatic-programmer})
 
 Beim Einsatz von Frameworks ist zu beachten, dass diese oft an mehreren Stellen dieselben Konfigurationen benötigen.
-Wenn zum Beispiel bei zu erstellenden Klassen ein oder mehrere Attribute auf denselben Wert gesetzt werden sollen, dann bietet es sich an, eine Oberklasse zu erstellen die diese Konfiguration bereits setzt.
+Wenn zum Beispiel bei zu erstellenden Klassen ein oder mehrere Attribute auf denselben Wert gesetzt werden sollen, bietet es sich an, eine Oberklasse zu erstellen die diese Konfiguration bereits setzt.
 
 \subsubsection{YAGNI (You aren't gonna need it)}
 Eine Implementierung sollte immer nur dann erfolgen, wenn sie konkret notwendig ist.
-Wenn lediglich vorhersehbar ist, dass eine gewisse Funktion notwendig sein wird, dann sollte sie noch nicht implementiert werden.
+Ist lediglich vorhersehbar, dass eine gewisse Funktion notwendig sein wird, sollte sie noch nicht implementiert werden.
 (Vgl.~\cite{extreme-programming-installed})
 
 Dieser Grundsatz wurde im Bereich des Extreme Programming geprägt.
-Begründet sieht er sich darin, dass es sich nur selten lohnt, für zukünftige Anforderungen zu entwickeln.
+Seine Begründung sieht er darin, dass es sich nur selten lohnt, für zukünftige Anforderungen zu entwickeln.
 (Vgl.~\cite{kiss-principle-explained})
 
 \subsubsection{PSR (PHP Standards Recommendations)}

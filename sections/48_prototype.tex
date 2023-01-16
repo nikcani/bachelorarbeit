@@ -5,32 +5,35 @@ Die neue Variante ist mit dem Präfix \enquote{/admin} in der Route aufrufbar.
 
 Im Gegensatz zum MVP mit Nova in der Praxisprojektarbeit, handelt es sich hier allerdings um einen reinen Prototyp.
 Daher liegt der Fokus nicht auf der vollständigen Umsetzung aller Features.
-Jedoch ist das bisherige Featureset der Sounding Console im neuen Prototyp nahezu vollständig abgebildet.
+Dabei ist jedoch das bisherige Featureset der Sounding Console im neuen Prototyp nahezu vollständig abgebildet.
 
 Der Fokus liegt insbesondere auf den Bereichen, die mit Nova eher problematisch waren.
 So zum Beispiel die Auswertung vergangener Flüge.
 
 \subsubsection{Positive Erfahrungen}
 Die Erfahrungen mit filament waren insgesamt sehr positiv.
-Vor allem viele Kleinigkeiten sind in filament schöner umgesetzt.
+Auch sind kleinere Aspekte in filament schöner umgesetzt.
 Ein Beispiel ist die Filterung von Tabellen.
-Ausgewählte Filter werden oberhalb der Tabelle dargestellt.
+Ausgewählte Filter werden unmittelbar oberhalb der Tabelle dargestellt.
 Bei Nova versteckt sich dies erst hinter einem Klick in einem Popup.
+Mit diesen Funktionen wird die Handhabung deutlich vereinfacht.
 
 \newlineparagraph{Flight View Anpassbarkeit}
-Manche Ansichten benötigen weitreichende Anpassungen, so vor allem die Ansicht eines vergangenen Fluges.
+Manche Ansichten benötigen weitreichende Anpassungen.
+Hierzu zählt speziell der Blick auf einen vergangenen Flug.
 Bei laufenden Flügen wird lediglich ein Dashboard mit aktuellen Werten und eine Karte angezeigt.
 Beides passt sinnvoll oberhalb der restlichen Komponenten der Ressource, den Stammdatenfeldern und der Messwertetabelle.
 
 Im Fall von vergangenen Flügen fällt das Dashboard weg, jedoch kommen ein Messdatendiagramm, eine Statistikübersicht und ein Skew-T-Diagramm hinzu.
-Insgesamt zu viele und zu große Komponenten, um diese direkt oberhalb auf der Seite zu platzieren.
-Ein User müsste zu viel scrollen, um alles zu erfassen, dies wäre unübersichtlich und ineffizient.
+Insgesamt sind das zu viele und zu große Komponenten, um diese direkt oberhalb auf der Seite zu platzieren.
+Ein User müsste viel scrollen, um alles zu erfassen.
+Dies wäre unübersichtlich und ineffizient.
 
 Nova bietet kaum Möglichkeiten eine Ansicht anzupassen.
-Daher war die beste Variante, die Komponenten in Unterpunkte auszulagern.
+Daher war es die beste Variante, die Komponenten in Unterpunkte auszulagern.
 Nova unterstützt sogenannte Tools, welche eigenständige Seiten sind, auf denen individuelle Komponenten implementiert werden können.
 Außerdem kann kontextabhängig das Menü angepasst werden.
-Tests erster Nutzer innerhalb des Teams zeigten allerdings, dass die entworfene Navigationsstruktur zu unübersichtlich ist.
+Tests erster Nutzer zeigten allerdings, dass die entworfene Navigationsstruktur zu unübersichtlich ist.
 
 Filament bietet gegenüber Nova weitaus mehr Möglichkeiten, eine Ansicht individuell anzupassen.
 So kann bei der vorliegenden Herausforderung eine individuelle View für den Header angegeben werden.
@@ -54,9 +57,9 @@ Die Seite springt nur, wenn neue Einträge hinzukommen.
 Insgesamt ist die User Experience durch diese Animation bei filament wesentlich besser als bei Nova.
 
 \newlineparagraph{Livewire Polling (Flight Dashboard Component)}
-Filament basiert auf Livewire\cite{livewire} und daher können innerhalb einer individuellen Komponente auch Funktionen von Livewire genutzt werden.
+Filament basiert auf Livewire\cite{livewire} und somit können innerhalb einer individuellen Komponente auch Funktionen von Livewire genutzt werden.
 So gibt es einen eingebauten Polling Mechanismus.
-Man fügt lediglich ein Attribut zu einem HTMl Objekt hinzu und Livewire ruft dieses in einem definierbaren Interval erneut vom Server ab.
+Man fügt lediglich ein Attribut zu einem HTMl Objekt hinzu und Livewire ruft dieses in einem definierbaren Intervall erneut vom Server ab.
 
 So wurde die Implementierung des Dashboards eines laufenden Fluges vereinfacht.
 Die Api und manuelles Polling mit anschließendem Austausch der Datenbasis, sodass Vue.js den Inhalt dann reaktiv updaten kann, wird nicht mehr benötigt.
@@ -70,42 +73,42 @@ Bei der Sounding Console werden beispielsweise Widgets als fertige Komponente ge
 \newpage
 
 \newlineparagraph{Infinite Loading Tables}
-Filament schafft es eine benutzbare UI mit mehreren tausenden geladenen und angezeigten Zeilen in einer Tabelle zu rendern.
+Filament schafft es, eine benutzbare UI mit mehreren tausenden geladenen und angezeigten Zeilen in einer Tabelle zu rendern.
 Damit ist im Gegensatz zu Nova kein Infinite Load/Scroll Pattern notwendig.
 
 Außerdem zeigt filament standardmäßig auch eine \enquote{All} Option für die Pagination an.
 Dadurch kann eine zu nativen Anwendungen vergleichbare UI erstellt werden, in welcher der User durch die vollständige Tabelle scrollen kann.
 
 \newlineparagraph{Tabellensortierung}
-Nachdem man bei filament eine Spalte als sortierbar definierbar hat, kann man für eine Ansicht ebenfalls eine Standardsortierung angeben.
+Ist bei filament eine Spalte als sortierbar definiert, kann für eine Ansicht ebenfalls eine Standardsortierung angegeben werden.
 Dabei ist sowohl die Angabe der Spalte möglich, als auch die Sortierrichtung.
 Das Problem mit Nova wird, durch diese implementierte Lösung, vollständig gelöst.
 
 \subsubsection{Negative Erfahrungen}
-Trotz aller positiven Erfahrungen gab es auch eine Hürde mit filament.
+Trotz aller positiven Erfahrungen gab es auch eine Hürde mit filament, welche im Folgenden erläutert ist.
 Diese konnte allerdings überwunden werden, es musste lediglich auf ein neues Konzept umgestellt werden.
 
 \newlineparagraph{Livewire Polling (Map Component)}
 Das Livewire Polling Konzept ist nicht immer von Vorteil.
-Bei einfachen Komponenten ist es sinnvoll, bei komplexeren Komponenten wie zum Beispiel der Karte, ist es jedoch ein Problem.
+Bei einfachen Komponenten ist es sinnvoll, bei komplexeren Komponenten wie zum Beispiel der Karte, ist es problematisch.
 Mit Nova war die Umsetzung etwas einfacher, da individuelle Nova Komponenten bereits eine geschützte HTTP Api vorbereiten, über die Updates regelmäßig abgerufen werden können.
 Das Polling der gesamten Komponente ist mit filament keine Option, dennoch müssen Veränderungen erkannt und automatisch angezeigt werden.
-Durch \enquote{wire:ignore} können allerdings einzelne Bestandteile ausgenommen werden.
+Durch das Attribut \enquote{wire:ignore} können allerdings einzelne Bestandteile ausgenommen werden.
 So wird die Karte und das dazugehörige Script nicht erneut geladen, sondern nur ein Teil, welcher bei einem Update ein Event aussendet, auf welches die Karte dann reagiert.
 
 \newpage
 
 \subsubsection{Implizit versus explizit}
-Die prototypischen Erfahrung entsprechen denen, über die andere Entwickler\cite{reddit-laravel-nova-vs-filament} bereits berichten.
-Nova arbeitet impliziter als filament.
-Man definiert Felder an einer Stelle, diese gelten dann sowohl für das Formular, als auch für die Tabelle.
-Bei filament definiert man ein Feld mindestens an zwei Stellen.
+Die prototypischen Erfahrung entsprechen denen, über die andere Entwickler\cite{reddit-laravel-nova-vs-filament} bereits berichteten.
+Nova arbeitet impliziter als filament:
+Felder werden an einer Stelle definiert, diese gelten dann sowohl für das Formular, als auch für die Tabelle.
+Bei filament wird ein Feld mindestens an zwei Stellen definiert.
 
 Grundsätzlich erwartet filament, dass für jede eigene Tabelle die Spalten erneut explizit definiert werden.
-Dies lässt sich allerdings umgehen, indem man einfach die Tabelle aus der Ressource referenziert.
+Dies lässt sich jedoch umgehen, indem die Tabelle aus der Ressource referenziert wird.
 
 Die unterschiedlichen Ansätze haben ihre Vor- und Nachteile.
 Der implizite Ansatz bei Nova ist schneller, insbesondere am Anfang.
 Filaments explizite Definitionen benötigen initial mehr Zeit, überzeugen aber am Ende durch eine bessere und einfachere Anpassbarkeit.
-Außerdem ist es durchaus sinnvoll, dass man explizit formuliert, wie die Felder im Formular und wie sie in Tabellen dargestellt werden.
+Zudem ist es durchaus sinnvoll, explizit zu formulieren, wie die Felder im Formular und wie sie in Tabellen dargestellt werden sollen.
 So wird verhindert, dass unerwartete Fälle eintreten, da mindestens einmal während der Entwicklung durchdacht werden muss, wie jeder Fall explizit definiert wird.

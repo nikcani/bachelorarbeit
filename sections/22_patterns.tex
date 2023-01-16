@@ -2,7 +2,7 @@
 
 \subsection{Patterns}
 Patterns, sogenannte Entwurfsmuster, wurden ursprünglich vom Architekten Christopher Alexander geprägt.
-Dieser beschrieb in seinem Buch \enquote{A Pattern Language: Towns, Buildings, Construction}\cite{a-pattern-language} im Jahr 1977 zum ersten Mal Muster, unter dessen Einsatz man immer wiederkehrende Probleme lösen kann.
+Dieser beschrieb in seinem Buch \enquote{A Pattern Language: Towns, Buildings, Construction}\cite{a-pattern-language} im Jahr 1977 zum ersten Mal Muster, unter dessen Einsatz sich wiederkehrende Probleme lösen lassen.
 In der Informatik wurden Entwurfsmuster durch die Veröffentlichung der \enquote{Gang of Four} im Jahr 1994 populärer.
 In ihrem Buch \enquote{Design Patterns - Elements of Reusable Object-Oriented Software}\cite{gamma-design-patterns} beschreiben Erich Gamma et al.\ 23 unterschiedliche Entwurfsmuster.
 Diese sind eingeteilt in die drei Kategorien Creational, Structural und Behavioral.
@@ -10,15 +10,14 @@ Diese sind eingeteilt in die drei Kategorien Creational, Structural und Behavior
 1999 ergänzte Martin Fowler in \enquote{Patterns of Enterprise Application Architecture}\cite{patterns-of-enterprise-application-architecture} die Kategorie \enquote{Objektrelationale Abbildung} und dazugehörige Muster.
 Gregor Hohpe und Bobby Woolf ergänzten 2003 die Kategorie der Messaging Patterns in ihrem Buch \enquote{Enterprise Integration Patterns}\cite{enterprise-integration-patterns}.
 
-Die Menge der Entwurfsmuster ist so umfangreich, dass eine Wiedergabe aller an dieser Stelle weder von Nutzen noch machbar wäre.
-Im Folgenden werden daher nur die Muster eingeführt, die im anschließenden Vergleich verwendet werden.
+Die Menge der Entwurfsmuster ist sehr umfangreich, weshalb im Folgenden nur jene Muster skizziert werden, die im anschließenden Vergleich verwendet werden.
 
 \subsubsection{MVC (Model-View-Controller)}
 \color{red}
 Dieses architektonische Pattern teilt eine interaktive Anwendung in drei Komponenten auf.
 Durch eine klare Trennung der Zuständigkeiten werden Wartungen einfacher und können besser auf unterschiedliche Entwickler aufgeteilt werden.
 Das Model ist nur zuständig für Daten und Business Logic, die View hingegen, nur für die Darstellung der Inhalte (\ref{fig:mvc})).
-Der Controller ist das Bindeglied und routet Daten und Befehle zwischen den anderen beiden Bereichen.
+Der Controller ist das Bindeglied und routet Daten sowie Befehle zwischen den beiden anderen Bereichen.
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
 tbd
