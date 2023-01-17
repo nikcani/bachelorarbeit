@@ -14,9 +14,23 @@ So zum Beispiel die Auswertung vergangener Flüge.
 Die Erfahrungen mit filament waren insgesamt sehr positiv.
 Auch sind kleinere Aspekte in filament schöner umgesetzt.
 Ein Beispiel ist die Filterung von Tabellen.
-Ausgewählte Filter werden unmittelbar oberhalb der Tabelle dargestellt.
-Bei Nova versteckt sich dies erst hinter einem Klick in einem Popup.
+Ausgewählte Filter werden unmittelbar oberhalb der Tabelle dargestellt (\ref{fig:active_filter_filament}).
+Bei Nova versteckt sich dies erst hinter einem Klick in einem Popup (\ref{fig:active_filter_nova}).
 Mit diesen Funktionen wird die Handhabung deutlich vereinfacht.
+
+\begin{figure}[h!]
+    \centering
+    \caption{active filter filament}
+    \label{fig:active_filter_filament}
+    \includegraphics[scale=0.15]{assets/active_filter_filament}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{active filter nova}
+    \label{fig:active_filter_nova}
+    \includegraphics[scale=0.15]{assets/active_filter_nova}
+\end{figure}
 
 \newlineparagraph{Flight View Anpassbarkeit}
 Manche Ansichten benötigen weitreichende Anpassungen.
@@ -30,7 +44,7 @@ Ein User müsste viel scrollen, um alles zu erfassen.
 Dies wäre unübersichtlich und ineffizient.
 
 Nova bietet kaum Möglichkeiten eine Ansicht anzupassen.
-Daher war es die beste Variante, die Komponenten in Unterpunkte auszulagern.
+Daher war es die beste Variante, die Komponenten in Unterpunkte auszulagern (\ref{fig:finished_flight_nova}).
 Nova unterstützt sogenannte Tools, welche eigenständige Seiten sind, auf denen individuelle Komponenten implementiert werden können.
 Außerdem kann kontextabhängig das Menü angepasst werden.
 Tests erster Nutzer zeigten allerdings, dass die entworfene Navigationsstruktur zu unübersichtlich ist.
@@ -38,12 +52,26 @@ Tests erster Nutzer zeigten allerdings, dass die entworfene Navigationsstruktur 
 Filament bietet gegenüber Nova weitaus mehr Möglichkeiten, eine Ansicht individuell anzupassen.
 So kann bei der vorliegenden Herausforderung eine individuelle View für den Header angegeben werden.
 Diese wird oberhalb aller anderen Komponenten auf der Ansichtsseite eines Fluges gerendert.
-Innerhalb dieser individuellen View kann dann eine Tab View implementiert werden, die immer nur eine größere Komponente auf einmal anzeigt.
+Innerhalb dieser individuellen View kann dann eine Tab View implementiert werden, die immer nur eine größere Komponente auf einmal anzeigt (\ref{fig:finished_flight_filament}).
 
 Die Lösung mit filament überzeugt durch eine deutlich bessere User Experience.
 Die komplizierte Navigationsstruktur im Menü entfällt komplett und alles findet direkt innerhalb der Flugansicht statt.
 Längeres Scrollen entfällt und die Ansicht bleibt kompakt und übersichtlich.
 Filament überzeugt durch die flexible und umfangreiche Anpassbarkeit.
+
+\begin{figure}[h!]
+    \centering
+    \caption{finished flight filament}
+    \label{fig:finished_flight_filament}
+    \includegraphics[scale=0.15]{assets/finished_flight_filament}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{finished flight nova}
+    \label{fig:finished_flight_nova}
+    \includegraphics[scale=0.15]{assets/finished_flight_nova}
+\end{figure}
 
 \newlineparagraph{Generelle Anpassbarkeit}
 Filament punktet, durch eine generell flexiblere Anpassbarkeit.
