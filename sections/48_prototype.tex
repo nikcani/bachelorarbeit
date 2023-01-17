@@ -135,8 +135,8 @@ So wird die Karte und das dazugehörige Script nicht erneut geladen, sondern nur
 \subsubsection{Implizit versus explizit}
 Die prototypischen Erfahrung entsprechen denen, über die andere Entwickler\cite{reddit-laravel-nova-vs-filament} bereits berichteten.
 Nova arbeitet impliziter als filament:
-Felder werden an einer Stelle definiert, diese gelten dann sowohl für das Formular, als auch für die Tabelle.
-Bei filament wird ein Feld mindestens an zwei Stellen definiert.
+Felder werden an einer Stelle definiert, diese gelten dann sowohl für das Formular, als auch für die Tabelle (\ref{fig:station_fields_nova}).
+Bei filament wird ein Feld mindestens an zwei Stellen definiert (\ref{fig:station_fields_filament}).
 
 Grundsätzlich erwartet filament, dass für jede eigene Tabelle die Spalten erneut explizit definiert werden.
 Dies lässt sich jedoch umgehen, indem die Tabelle aus der Ressource referenziert wird.
@@ -146,3 +146,17 @@ Der implizite Ansatz bei Nova ist schneller, insbesondere am Anfang.
 Filaments explizite Definitionen benötigen initial mehr Zeit, überzeugen aber am Ende durch eine bessere und einfachere Anpassbarkeit.
 Zudem ist es durchaus sinnvoll, explizit zu formulieren, wie die Felder im Formular und wie sie in Tabellen dargestellt werden sollen.
 So wird verhindert, dass unerwartete Fälle eintreten, da mindestens einmal während der Entwicklung durchdacht werden muss, wie jeder Fall explizit definiert wird.
+
+\begin{figure}[h!]
+    \centering
+    \caption{station fields nova}
+    \label{fig:station_fields_nova}
+    \includegraphics[scale=0.20]{assets/station_fields_nova}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{station fields filament}
+    \label{fig:station_fields_filament}
+    \includegraphics[scale=0.20]{assets/station_fields_filament}
+\end{figure}
