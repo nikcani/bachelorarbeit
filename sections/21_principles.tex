@@ -14,10 +14,9 @@ Die Grundlage dafür legte er in seinem Paper \enquote{Design Principles and Des
 \newlineparagraph{Single Responsibility Principle}
 \enquote{A class should have one, and only one, reason to change.}\cite{solid}
 Eine Klasse sollte immer so designt werden, dass sie nur einen Zweck erfüllt\cite{different-types-of-software-design-principles}.
-
-\color{red}
-Ziel definieren im Projektkontext
-\color{black}
+Insbesondere für Änderungen ist es wichtig, dass Klassen möglichst klein sind.
+Größere Klassen nachzuvollziehen ist komplexer und aufwändiger, Änderungen werden dadurch erschwert.
+(Vgl.~\cite{clean-code})
 
 \newlineparagraph{Open Closed Principle}
 \enquote{You should be able to extend a classes' behavior, without modifying it.}\cite{solid}
@@ -26,10 +25,6 @@ Allerdings sollte es immer möglich sein, die Funktionalität zu erweitern.
 Dafür ist es wichtig, dass die Klassen so entworfen sind, dass Unterklassen die Funktionalität durch Overwrites nicht einschränken können.
 Dafür ist es erforderlich relevante Typen zu definieren und wichtige und finale Methoden auch als solche zu markieren, damit diese nicht mehr verändert werden können.
 (Vgl.~\cite{different-types-of-software-design-principles})
-
-\color{red}
-Ziel definieren im Projektkontext
-\color{black}
 
 \newpage
 
