@@ -1,0 +1,68 @@
+\newpage
+
+\subsection{Clean Code}
+Robert C. Martin nennt in seinem Buch \enquote{Clean Code: A Handbook of Agile Software Craftmanship}\cite{clean-code} verschiedene Heuristiken für \enquote{Clean Code}.
+Diese sind aufgeteilt in die folgenden Gruppen:
+
+\newlineparagraph{Kommentare}
+In Kommentaren sollten sich nur geeignete Inhalte befinden.
+Redundanzen oder veraltete Informationen stören, außerdem sollten Kommentare präzise und sprachlich sauber geschrieben werden.
+Auskommentierter Code sollte unbedingt entfernt werden.
+
+\newlineparagraph{Umgebung}
+Ein Projekt sollte in einem trivialen Schritt gebaut werden können, dies gilt ebenfalls für alle Tests.
+
+\newlineparagraph{Funktionen}
+Funktionen sollten möglichst wenige Argumente haben, maximal jedoch drei.
+Anstelle von Rückgabewerten sollte das Objekt verändert werden, auf dem Funktionen ausgeführt werden.
+\enquote{Flag Arguments} sollten ersetzt werden, die unterschiedlichen Funktionen aufgeteilt werden.
+Methoden sollten entfernt werden, wenn sie nicht mehr verwendet werden.
+
+\newlineparagraph{Generelles}
+Quelldateien sollten möglichst nur eine Sprache enthalten.
+Offensichtliche Erwartungen sollten erfüllt werden, auch bei Randfällen.
+Sicherheitsmechanismen, wie zum Beispiel Tests, sollten nicht überschrieben werden.
+Duplikate sind unbedingt zu vermeiden.
+Jeder Bestandteil gehört in eine bestimmte Abstraktionsschicht.
+Basisklassen sollten nicht von Ihren Ableitungen abhängen.
+Zu viele Informationen sollten aufgeteilt und vereinfacht, toter Code gelöscht werden.
+Funktionen und Variablen sollten nah bei ihrer Verwendung definiert werden.
+Inkonsistenzen, Unordnung und künstliche Abhängigkeiten sollten vermieden werden.
+Features sollten an der Stelle implementiert werden, wo sie sinnvoll hingehören, zum Beispiel durch die Abhängigkeit von Variablen.
+Selektoren in Funktionsargumenten sollten nicht verwendet werden, stattdessen können die Funktionen meist aufgeteilt werden.
+Die Absicht des Codes sollte nie versteckt werden.
+Methoden sollten nur statisch implementiert werden, wenn dies Sinn ergibt.
+Variablen sollten erklärende Namen tragen, ebenso sollten Funktionen nach ihrem Zweck benannt werden.
+Verwendete Algorithmen sollten dem Entwickler klar sein.
+Polymorphismen sind komplexen Verzweigungen vorzuziehen.
+Standardisierte Konventionen sollten befolgt werden.
+Magische Werte sollten nur in benannten Konstanten bestehen.
+Code sollte nicht willkürlich, sondern präzise sein und Struktur immer der Konvention voranstellen.
+Komplexere konditionalitäten sollten in Funktionen extrahiert werden, ebenso sollte auf negierte Bedingungen verzichtet werden.
+Funktionen sollten nur eine Sache erledigen und nur eine Abstraktionsebene bearbeiten.
+Zeitliche abhängigkeiten sollten nicht versteckt sein, sondern im Code vorgegeben sein.
+Randbedingungen sollten explizit benannt werden.
+Konfigurierbare Daten sollten in den oberen Ebenen verankert sein.
+Module sollten nur mit ihren direkten Abhängigkeiten interagieren.
+
+\newlineparagraph{Bennenungen}
+Namen sollten stets beschreibend sein und die passende Abstraktionsebene reflektieren.
+Standardisierte Nomenklatur sollte möglichst verwendet werden.
+Zweideutigkeiten sollten vermieden werden.
+Für größere Bereiche sollten auch längere Namen verwendet werden.
+Kodierte Präfixe sollten vermieden, Nebeneffekte sollten beschrieben werden.
+
+\newlineparagraph{Tests}
+Eine ausreichende Menge Tests ist anzustreben, Coverage Tools helfen bei der Prüfung.
+Auch triviale Tests sind wichtig.
+Tests sollten nicht ignoriert werden.
+Randbedingungen und Bereiche um Fehler herum sollten besonders getestet werden.
+Patterns in der Art und Weise, wie Tests fehlschlagen, können das Problem eingrenzen.
+Ebenso interessant sind Test Coverage Patterns.
+Tests sollten so schnell wie möglich sein, da sie sonst nicht ausgeführt werden.
+
+\subsubsection{The Boy Scout Rule}
+Wichtig zu erwähnen bleibt, dass Code nicht nur einmal gut geschrieben werden muss.
+Code muss mit der Zeit sauber gehalten werden, um durch Änderungen nicht schlechter zu werden.
+In diesem Kontext sollte die Regel der amerikanischen Pfadfinder angewendet werden:
+\enquote{Leave the campground cleaner than you found it.}
