@@ -31,30 +31,24 @@ Dafür ist es erforderlich relevante Typen zu definieren und wichtige und finale
 \newlineparagraph{Liskov Substitution Principle}
 \enquote{Derived classes must be substitutable for their base classes.}\cite{solid}
 Eine Unterklasse sollte immer genau wie die Oberklasse verwendet werden können, die sie erweitert\cite{different-types-of-software-design-principles}.
-
-\color{red}
-Ziel definieren im Projektkontext
-\color{black}
+Dafür müssen Methodenparameter und -rückgabewerte gleich bleiben.
+Neue Exceptions dürfen nur genutzt werden, wenn sie Subklassen der Exceptions sind, die auch in der Oberklasse verwendet werden.
 
 \newlineparagraph{Interface Segregation Principle}
 \enquote{Make fine-grained interfaces that are client specific.}\cite{solid}
 Interfaces sollten genau wie Klassen möglichst spezifisch sein.
 Diese Theorie zielt darauf, dass die implementierenden Klassen nicht gegen das Single Responsibility Principle verstoßen.
+Durch kleinere Interfaces müssen die implementierenden Klassen auch nur wesentliche Funktionen implementieren.
+Dies vereinfach sowohl den Einsatz von Interfaces, als auch die Wartung des Codes.
 (Vgl.~\cite{design-patterns-php-laravel})
-
-\color{red}
-Ziel definieren im Projektkontext
-\color{black}
 
 \newlineparagraph{Dependency Inversion Principle}
 \enquote{Depend on abstractions, not on concretions.}\cite{solid}
 Für eine möglichst lose Kopplung zwischen konkreten Klassen sollte man sich auf Interfaces und abstrakte Klassen verlassen.
 So wird eine flexiblere Codebase ermöglicht.
+Module aus höheren Abstraktionsebenen sollten nichts von niedrigeren Ebenen importieren.
+Die lose Kopplung wird erreicht, wenn zwischen den unterschiedlichen Ebenen abstrakte Interfaces anstatt konkreter Implementierungen genutzt werden.
 (Vgl.~\cite{design-patterns-php-laravel})
-
-\color{red}
-Ziel definieren im Projektkontext
-\color{black}
 
 \newpage
 
