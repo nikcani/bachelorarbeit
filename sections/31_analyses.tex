@@ -74,3 +74,11 @@ Ob die Frameworks dieses Pattern ermöglichen, ist zu überprüfen.
 
 Weitere mögliche Patterns im Bereich der Kommunikation zwischen Komponenten sind ein Broker sowie ein Proxy.
 Es ist zu kontrollieren, ob diese Patterns unterstützt werden und zur Anwendung kommen.
+
+\newlineparagraph{Ungeeignete Patterns}
+Es gibt diverse Patterns, die in diesem Projekt zur Anwendung kommen, allerdings ungeeignet für den Vergleich sind.
+Das liegt daran, dass diese nicht in der Ebene von Nova oder filament liegen, sondern in der Ebene, in der Laravel arbeitet.
+So werden zum Beispiel viele Funktionen von Laravel als Facades (\cite{gamma-design-patterns}) angeboten.
+Für die Datenmodelle gibt es beispielsweise Observer (\cite{gamma-design-patterns}), die dann unterschiedliche Funktionen aufrufen können, wenn sich ein Datensatz ändert.
+Diese beiden Patterns werden in der Sounding Console verwendet, allerdings sowohl mit Nova als auch mit filament.
+Daher sind diese Patterns nicht für einen Vergleich geeignet.
