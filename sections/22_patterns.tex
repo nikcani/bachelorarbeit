@@ -56,6 +56,13 @@ Von Vorteil ist, dass Abhängigkeiten in der Regel nur in einem Layer liegen.
 Ebenso positiv ist die Wiederverwendbarkeit, Standardisierbarkeit und Austauschbarkeit einzelner Ebenen.
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
+\subsubsection{Publisher-Subscriber}
+Wenn mehrere Komponenten von Veränderungen einer anderen Komponente abhängen, kann dieses Pattern angewendet werden.
+Komponenten können die Änderungen einer oder mehrerer anderer Komponenten abonnieren.
+Der Publisher speichert eine Liste aller seiner Subscriber.
+Im Falle eines Updates benachrichtigt er diese über Art und Inhalt der Veränderungen.
+(Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
+
 \subsubsection{Broker}
 Liegen in einem System unabhängige aber kooperierende Komponenten vor, so kann man diese mittels eines Brokers koppeln.
 Der Broker koordiniert die Kommunikation zwischen den einzelnen Komponenten.
@@ -70,11 +77,4 @@ Ein Proxy ist verantwortlich für die Kommunikation von einer oder mehrere Kompo
 Jegliche Kommunikation läuft repräsentativ über den Proxy, sowohl eingehende Antworten als auch ausgehende Daten.
 Dies kann die Effizienz steigern, den Zugriff vereinfachen und den Zugriff steuern.
 Ebenso können die Komponenten hinter dem Proxy besser angepasst werden, ohne dass Anpassungen an den Clients notwendig werden.
-(Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
-
-\subsubsection{Publisher-Subscriber}
-Wenn mehrere Komponenten von Veränderungen einer anderen Komponente abhängen, kann dieses Pattern angewendet werden.
-Komponenten können die Änderungen einer oder mehrerer anderer Komponenten abonnieren.
-Der Publisher speichert eine Liste aller seiner Subscriber.
-Im Falle eines Updates benachrichtigt er diese über Art und Inhalt der Veränderungen.
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
