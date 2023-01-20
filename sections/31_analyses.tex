@@ -11,41 +11,6 @@ Dafür wird eine geeignete Vergleichsmethodik identifiziert, definiert und durch
 Weitere mögliche Vergleichsaspekte sind die Maturity der beiden Frameworks, der verwendete Code Style, ein Kostenvergleich und Unterschiede in der Lizenzierung.
 Inwiefern diese Aspekte vergleichbar sind, ist ebenfalls Gegenstand dieser Analyse.
 
-\newpage
-
-\subsection{Probleme des bisherigen Prototyps}
-Im Rahmen der Nutzwertanalyse wurde angenommen, dass filament im Vergleich zu Nova besser anpassbar ist.
-Insbesondere die Flight View wurde in Tests von Anwendern kritisiert.
-Nova zeigte bezogen auf die Platzierung von individuellen Komponenten innerhalb einer View wenig Spielraum.
-Im praktischen Prototyp soll nun geprüft werden, ob filament in diesem Fall bessere Anpassungsmöglichkeiten bietet.
-Zudem ergaben sich die folgenden Probleme bei der Umsetzung des MVP mit Nova.
-
-\newlineparagraph{Styling von Custom Components}
-Trotz individueller Komponenten wird ein einheitliche UI (User Interface) angestrebt.
-Dazu werden innerhalb der individuellen Komponenten UI-Components von Nova importiert.
-Dies ist bei Nova jedoch nicht vorgesehen.
-Es gilt daher zu klären, ob sich dies bei filament anders darstellt.
-
-\newlineparagraph{Infinite Loading Tables}
-Die unschön gelösten Infinite Loading Tabellen in Nova sind problematisch, da die Funktion mit einem Update jederzeit unbrauchbar gemacht werden könnte.
-Filament bietet in der Pagination die Möglichkeit, alle Datensätze in einer Tabelle zu laden.
-Es wird daher geprüft, ob die Performance hierzu ausreichend ist oder ob es eine andere Lösung gibt.
-
-\newlineparagraph{Tabellensortierung}
-Die fehlende Möglichkeit, bei der Messwertetabelle eine Standardsortierung zu definieren, ist ein weiterer Kritikpunkt bei Nova.
-Beim Einsatz von filament wird geprüft, ob dieses Problem gelöst werden kann.
-
-\newlineparagraph{Polling Tables}
-Manche Tabellen, beispielsweise die Stationsübersicht, sollen in einem gewissen Intervall automatisch abgerufen werden.
-So können Anwender stets erkennen, welche Stationen aktuell online sind und welche nicht.
-Nova bietet zwar diese Funktionalität, allerdings ist die Animation sehr störend:
-Die Tabelle verschwindet für einen Moment und dadurch ist ein einfacher und schneller Vergleich schwierig.
-Außerdem wird die Tabelle kürzer während der Animation.
-Dadurch springt die ganze Seite und erschwert so den Fokus des Users.
-
-Filament bietet das notwendige Feature ebenfalls.
-Es wird im Prototyp daher geprüft, ob die Animation besser umgesetzt ist.
-
 \subsection{Geeignete Principles und Patterns}
 Die Auswahl der Principles und Patterns im Grundlagenteil dieser Arbeit erfolgte bereits begründet.
 Nicht jedes Pattern passt in jedem Kontext.
@@ -82,3 +47,38 @@ So werden zum Beispiel viele Funktionen von Laravel als Facades (\cite{gamma-des
 Für die Datenmodelle gibt es beispielsweise Observer (\cite{gamma-design-patterns}), die dann unterschiedliche Funktionen aufrufen können, wenn sich ein Datensatz ändert.
 Diese beiden Patterns werden in der Sounding Console verwendet, allerdings sowohl mit Nova als auch mit filament.
 Daher sind diese Patterns nicht für einen Vergleich geeignet.
+
+\newpage
+
+\subsection{Probleme des bisherigen Prototyps}
+Im Rahmen der Nutzwertanalyse wurde angenommen, dass filament im Vergleich zu Nova besser anpassbar ist.
+Insbesondere die Flight View wurde in Tests von Anwendern kritisiert.
+Nova zeigte bezogen auf die Platzierung von individuellen Komponenten innerhalb einer View wenig Spielraum.
+Im praktischen Prototyp soll nun geprüft werden, ob filament in diesem Fall bessere Anpassungsmöglichkeiten bietet.
+Zudem ergaben sich die folgenden Probleme bei der Umsetzung des MVP mit Nova.
+
+\newlineparagraph{Styling von Custom Components}
+Trotz individueller Komponenten wird ein einheitliche UI (User Interface) angestrebt.
+Dazu werden innerhalb der individuellen Komponenten UI-Components von Nova importiert.
+Dies ist bei Nova jedoch nicht vorgesehen.
+Es gilt daher zu klären, ob sich dies bei filament anders darstellt.
+
+\newlineparagraph{Infinite Loading Tables}
+Die unschön gelösten Infinite Loading Tabellen in Nova sind problematisch, da die Funktion mit einem Update jederzeit unbrauchbar gemacht werden könnte.
+Filament bietet in der Pagination die Möglichkeit, alle Datensätze in einer Tabelle zu laden.
+Es wird daher geprüft, ob die Performance hierzu ausreichend ist oder ob es eine andere Lösung gibt.
+
+\newlineparagraph{Tabellensortierung}
+Die fehlende Möglichkeit, bei der Messwertetabelle eine Standardsortierung zu definieren, ist ein weiterer Kritikpunkt bei Nova.
+Beim Einsatz von filament wird geprüft, ob dieses Problem gelöst werden kann.
+
+\newlineparagraph{Polling Tables}
+Manche Tabellen, beispielsweise die Stationsübersicht, sollen in einem gewissen Intervall automatisch abgerufen werden.
+So können Anwender stets erkennen, welche Stationen aktuell online sind und welche nicht.
+Nova bietet zwar diese Funktionalität, allerdings ist die Animation sehr störend:
+Die Tabelle verschwindet für einen Moment und dadurch ist ein einfacher und schneller Vergleich schwierig.
+Außerdem wird die Tabelle kürzer während der Animation.
+Dadurch springt die ganze Seite und erschwert so den Fokus des Users.
+
+Filament bietet das notwendige Feature ebenfalls.
+Es wird im Prototyp daher geprüft, ob die Animation besser umgesetzt ist.
