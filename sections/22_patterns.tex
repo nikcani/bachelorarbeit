@@ -33,6 +33,21 @@ Auf diese Weise wird die Präsentationsebene, mit der Menschen interagieren, vom
 
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
+\subsubsection{View Handler}
+Wenn mehrere Ansichten in einer Anwendung benötigt werden, kann das View Handler Pattern eingesetzt werden.
+Ansichten öffnen, verändern und schließen wird durch den View Handler organisiert.
+Ebenso werden Abhängigkeiten zwischen den unterschiedlichen Ansichten und deren Update durch den View Handler geregelt.
+Von Vorteil ist die einheitliche Handhabung der Komponenten, sowie die Erweiterbarkeit und Anpassbarkeit der Ansichten.
+(Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
+
+\subsubsection{Whole-Part}
+Dieses Pattern kommt zum Einsatz, wenn mehrere Komponenten eine semantische Einheit bilden können.
+Es wird eine aggregierte Komponente gebildet, die ihre Bestandteile umschließt, deren Interaktion organisiert und ein Interface nach Außen abbildet.
+Der direkte Zugriff auf die Bestandteile ist nicht möglich, jede Funktion wird über das \enquote{Whole} aufgerufen.
+Von Vorteil ist die verbesserte Anpassbarkeit der Bestandteile der Komponenten, da jegliche Interaktion nach Außen über das Whole läuft.
+Außerdem werden die einzelnen Angelegenheiten voneinander getrennt und sowohl die Wiederverwendbarkeit der Bestandteile, als auch die der Gruppe wird verbessert.
+(Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
+
 \subsubsection{Layers}
 Wenn die Unteraufgaben einer Applikation in unterschiedlichen Abstraktionsebenen liegen, so kann man die Applikation in Layers (übersetzt: Ebenen) aufteilen.
 Ein Layer interagiert immer nur mit dem direkt untergeordneten Layer.
@@ -50,26 +65,11 @@ Ebenso können Komponenten einfach ausgetauscht oder erweitert werden, sofern di
 Zusätzlich wird die Wiederverwendbarkeit der Komponenten gestärkt.
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
-\subsubsection{Whole-Part}
-Dieses Pattern kommt zum Einsatz, wenn mehrere Komponenten eine semantische Einheit bilden können.
-Es wird eine aggregierte Komponente gebildet, die ihre Bestandteile umschließt, deren Interaktion organisiert und ein Interface nach Außen abbildet.
-Der direkte Zugriff auf die Bestandteile ist nicht möglich, jede Funktion wird über das \enquote{Whole} aufgerufen.
-Von Vorteil ist die verbesserte Anpassbarkeit der Bestandteile der Komponenten, da jegliche Interaktion nach Außen über das Whole läuft.
-Außerdem werden die einzelnen Angelegenheiten voneinander getrennt und sowohl die Wiederverwendbarkeit der Bestandteile, als auch die der Gruppe wird verbessert.
-(Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
-
 \subsubsection{Proxy}
 Ein Proxy ist verantwortlich für die Kommunikation von einer oder mehrere Komponenten mit mehreren Clients.
 Jegliche Kommunikation läuft repräsentativ über den Proxy, sowohl eingehende Antworten als auch ausgehende Daten.
 Dies kann die Effizienz steigern, den Zugriff vereinfachen und den Zugriff steuern.
 Ebenso können die Komponenten hinter dem Proxy besser angepasst werden, ohne dass Anpassungen an den Clients notwendig werden.
-(Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
-
-\subsubsection{View Handler}
-Wenn mehrere Ansichten in einer Anwendung benötigt werden, kann das View Handler Pattern eingesetzt werden.
-Ansichten öffnen, verändern und schließen wird durch den View Handler organisiert.
-Ebenso werden Abhängigkeiten zwischen den unterschiedlichen Ansichten und deren Update durch den View Handler geregelt.
-Von Vorteil ist die einheitliche Handhabung der Komponenten, sowie die Erweiterbarkeit und Anpassbarkeit der Ansichten.
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
 \subsubsection{Publisher-Subscriber}
