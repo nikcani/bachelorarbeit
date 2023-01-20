@@ -47,12 +47,30 @@ Filament bietet das notwendige Feature ebenfalls.
 Es wird im Prototyp daher geprüft, ob die Animation besser umgesetzt ist.
 
 \subsection{Geeignete Principles und Patterns}
-\color{red}
-\begin{itemize}
-    \item welche Principles sind geeignet
-    \item welche Patterns sind geeignet
-    \item Diskussion alternativer Vorgehensweisen
-\end{itemize}
+Die Auswahl der Principles und Patterns im Grundlagenteil dieser Arbeit erfolgte bereits begründet.
+Nicht jedes Pattern passt in jedem Kontext.
+Im Folgenden wird begründet, warum die skizzierten Principles und Patterns im vorliegenden Projektkontext überprüft werden.
 
-tbd
-\color{black}
+\newlineparagraph{Geeignete Principles}
+Die Sounding Console folgt dem Konzept der objektorientierten Entwicklung.
+Dafür sind die SOLID Principles entworfen und daher im vorliegenden Projekt geeignet.
+
+Die Prinzipien KISS, DRY und YAGNI sind generell für unterschiedlichste Softwareprojekte geeignet.
+Daher wird der Einsatz der Frameworks untersucht auf Einfachheit, Wiederholungen und vorbereitenden, aber nicht notwendigen Code.
+
+Filament und Nova sind, abgesehen vom Frontend, in PHP geschrieben.
+Beim Einsatz der Frameworks wird fast ausschließlich PHP verwendet.
+Die PSR ist daher der geeignete Coding Standard, der hier zur Anwendung kommt.
+
+\newlineparagraph{Geeignete Patterns}
+Im Bereich der Webentwicklung kommt meist das MVC Pattern zum Einsatz.
+Es ist daher zu prüfen, ob dies der Fall ist oder ob PAC verwendet wird.
+Zusätzlich ist zu erkunden, ob das View Handler Pattern zum Einsatz kommt.
+
+Die Sounding Console besteht aus mehreren Komponenten.
+Es könnten daher einige als Whole-Part organisiert oder in Layer aufgeteilt sein, dies ist zu prüfen.
+Ebenfalls anwendbar für die Kommunikation zwischen Komponenten wäre das Publisher-Subscriber Pattern.
+Ob die Frameworks dieses Pattern ermöglichen, ist zu überprüfen.
+
+Weitere mögliche Patterns im Bereich der Kommunikation zwischen Komponenten sind ein Broker sowie ein Proxy.
+Es ist zu kontrollieren, ob diese Patterns unterstützt werden und zur Anwendung kommen.
