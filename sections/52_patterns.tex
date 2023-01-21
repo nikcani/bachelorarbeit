@@ -4,9 +4,20 @@ In beiden Dokumentationen ist allerdings eine Möglichkeit für Komponenten zur 
 Alle weiteren Patterns bzw.\ deren Verwendung sind anhand des Prototyps zu prüfen.
 
 \subsubsection{MVC}
-\color{red}
-Sind passende Probleme mit dem Pattern gelöst?
-\color{black}
+Würde die Sounding Console mit Laravel individuell entwickelt werden, so würde sehr wahrscheinlich dieses Pattern zum Einsatz kommen.
+Laravel bereitet Models, Views und Controller bereits vor und ermöglicht deren komfortable Nutzung.
+Beim Einsatz von Nova und filament fällt allerdings der Controller weitestgehend weg.
+Auch die View, welche klassischerweise in irgendeiner Form HTMl enthalten würde, wird neu gedacht.
+Die Frameworks ermöglichen Definitionen von Ressourcen und weiteren Features.
+Die daraus resultierenden Views werden durch die Frameworks selbst gerendert und die notwendigen Funktionen eines Controllers sind ebenfalls bereits abgedeckt.
+
+Eine Ausnahme bilden Widgets bei filament und Cards bzw.\ Tools bei Nova.
+Bei filament gibt es, neben einer klassischen Blade View, eine Klasse für das Widget, die Aufgaben eines Controllers übernimmt.
+Nova nutzt bei Cards bzw.\ Tools View in Vue.js und hängt dazwischen eine Klasse und API Routen, die Funktionen eines Controllers übernehmen können.
+
+Das MVC Pattern wird als nur in Teilen umgesetzt.
+Dies ist allerdings von Vorteil, da zentrales Feature beider Frameworks die Vereinfachung der Ressourcenverwaltung ist.
+Daher sollen auch kaum bis keine Controller und klassischen Views implementiert werden, da dies mehr Zeit in Anspruch nehmen würde.
 
 \subsubsection{PAC}
 Beide Frameworks setzten wie bereits erwähnt eher auf das MVC Pattern.
