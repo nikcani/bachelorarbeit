@@ -1,14 +1,36 @@
-\color{red}
-
 \subsection{Vergleich anhand von Design Principles}
 Weder in der Dokumentation von Nova, noch in der Dokumentation von filament, sind Principles dokumentiert.
 Es ist daher anhand des Prototyps im Detail zu prüfen, ob die jeweiligen Principles durch die Frameworks ermöglicht werden.
 
 \subsubsection{SOLID}
 \newlineparagraph{Single Responsibility Principle}
-- Principles dokumentiert?
-- Prototyp: Principles befolgt?
+Eine der wichtigsten Verantwortlichkeiten, die beide Frameworks übernehmen, ist die Definition der Ressourcen.
+Es wird in beiden Fällen ein Model, welches Daten aus der Datenbank Objekten in PHP zuordnet, als Basis für eine Ressource verwendet.
+Damit das jeweilige Framework eine passende UI rendern kann, müssen unterschiedliche Definitionen erfolgen:
+So sind Datenbankspalten bzw.~Model Attribute Formularfeldern zugeordnet.
+Auch Relationen zu anderen Model sind anzugeben.
+Ebenso erfolgt eine Zuordnung zu Tabellenspalten.
+Welche Widgets zusätzlich in der UI einer Ressource gerendert werden, wird ebenfalls definiert.
+Außerdem gibt es weitere Einstellungen wie zum Beispiel die Zusammensetzung des Titels einer Ressource oder Filteroptionen.
 
+Bei Nova erfolgen alle diese Definitionen in einer Klasse.
+Grundsätzlich kann man dies als eine Verantwortlichkeit im Sinne des Single Responsibility Principle auffassen, jedoch fallen auch schnell Hürden dieser Aufgabenbündelung auf.
+So werden zum Beispiel auf unterschiedlichen Seiten einer Ressource, beispielsweise Index und Detail, auch verschiedene Widgets angezeigt.
+Bei Nova müssen die unterschiedlichen Fälle dafür in einer Methode geprüft werden und dynamisch definiert werden.
+
+Filament löst die Verantwortlichkeiten besser.
+So gibt es für die üblichen vier Unterseiten einer Ressource, aber auch für zusätzliche, je eine eigene Klasse.
+Diese regeln die Anzeige der jeweiligen Widgets und die Anzeige von Aktionsschaltflächen.
+Es können aber auch je Unterseite weitere Konfigurationen erfolgen, wie zum Beispiel ein angepasstes Formular.
+Möglich ist auch, eine standardisierte Unterseite vollständig durch eine individuelle zu ersetzen.
+
+Filament lagert zusätzlich eine weitere Verantwortlichkeit aus.
+Relationen werden durch sogenannte \enquote{Relation Manager} in einer eigenen Klasse verwaltet und in der zentralen Resource lediglich referenziert.
+
+Nova trennt Verantwortlichkeiten grundsätzlich vernünftig, ein gutes Beispiel dafür sind die Widgets.
+Filament setzt das Principle allerdings im Detail etwas besser um.
+
+\color{red}
 \newlineparagraph{Open Closed Principle}
 Wird im Prototyp dieses Principle befolgt?
 
