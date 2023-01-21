@@ -42,11 +42,14 @@ Die Anwendung ist allerdings auch recht überschaubar und eher auf einer Abstrak
 Das Layers Pattern wird nicht verwendet.
 
 \subsubsection{Publisher-Subscriber}
-\color{red}
-Sind passende Probleme mit dem Pattern gelöst?
-\cite{filament-docs-events}
-\cite{nova-docs-events}
-\color{black}
+Nova ermöglicht es JavaScript Komponenten, also vor allem den individuell entwickelten Cards/Tools, über einen Event Bus (\cite{nova-docs-events}) zu kommunizieren.
+Komponenten können bestimmte Events abonnieren oder Daten veröffentlichen.
+Filament ermöglicht Formularen über Events (\cite{filament-docs-events}) mit dem Backend zu kommunizieren.
+Auch hier können bestimmte Events abonniert oder Daten veröffentlicht werden.
+
+Beide Frameworks verwenden das Pattern, auch wenn sie es anders benennen.
+Allerdings ist die Implementierung in beiden Fällen nicht wirklich umfangreich und eher ausbaufähig.
+Wünschenswert wäre eine Möglichkeit, die Kommunikation von jeder beliebigen Stelle aus zwischen verschiedenen Komponenten im Frontend und Backend zu ermöglichen.
 
 \subsubsection{Broker}
 \color{red}
@@ -73,8 +76,8 @@ Anhand der Tabelle~\ref{tab:bewertung-patterns} wird deutlich, dass XXX in Bezug
         MVC                  & 1             & 1                 \\ \hline
         PAC                  & 0             & 0                 \\ \hline
         Whole-Part           & X             & X                 \\ \hline
-        Layers               & X             & X                 \\ \hline
-        Publisher-Subscriber & X             & X                 \\ \hline
+        Layers               & 0             & 0                 \\ \hline
+        Publisher-Subscriber & 1             & 1                 \\ \hline
         Broker               & X             & X                 \\ \hline
         Proxy                & X             & X                 \\ \hline
         \textbf{Summe}       & \textbf{X}    & \textbf{X}        \\ \hline
