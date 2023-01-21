@@ -75,7 +75,13 @@ Insgesamt sind also beide Frameworks ähnlich simpel in ihrem Aufbau und der Art
 
 \color{red}
 \subsubsection{DRY}
-Wird im Prototyp dieses Principle befolgt?
+Beide Frameworks ermöglichen es, Wiederholungen zu verhindern.
+Die Konfigurationen erfolgen vollständig in Code, meistens in Klassen.
+Dadurch ist es möglich, Oberklassen zu erstellen, die wiederkehrende Konfigurationen an einer Stelle bündeln.
+
+Auch andere Optionen sind möglich.
+Da zum Beispiel die Identifier eines Feldes an verschiedenen Stellen immer wieder verwendet werden, sind diese im Prototypen in eigene Klassen ausgelagert.
+Je Feld gibt es eine Klasse, das neben dem Identifier auch das Formularfeld, die Tabellenspalte, die Farbe und weitere Definitionen beinhaltet.
 
 \subsubsection{YAGNI}
 Wird im Prototyp dieses Principle befolgt?
