@@ -7,7 +7,7 @@ Es ist daher anhand des Prototyps im Detail zu prüfen, ob die jeweiligen Princi
 Eine der wichtigsten Verantwortlichkeiten, die beide Frameworks übernehmen, ist die Definition der Ressourcen.
 Es wird in beiden Fällen ein Model, welches Daten aus der Datenbank Objekten in PHP zuordnet, als Basis für eine Ressource verwendet.
 Damit das jeweilige Framework eine passende UI rendern kann, müssen unterschiedliche Definitionen erfolgen:
-So sind Datenbankspalten bzw.~Model Attribute Formularfeldern zugeordnet.
+So sind Datenbankspalten bzw.\ Model Attribute Formularfeldern zugeordnet.
 Auch Relationen zu anderen Model sind anzugeben.
 Ebenso erfolgt eine Zuordnung zu Tabellenspalten.
 Welche Widgets zusätzlich in der UI einer Ressource gerendert werden, wird ebenfalls definiert.
@@ -40,7 +40,11 @@ Es ist definitiv möglich, das Verhalten von Oberklassen in Unterklassen anzupas
 Allerdings sind beide Frameworks dabei zu offen gestaltet.
 
 \newlineparagraph{Liskov Substitution Principle}
-Wird im Prototyp dieses Principle befolgt?
+Dieses Principle betrifft Erweiterungen und damit im Kontext der Frameworks den Teil, für den Entwickler zuständig sind, welche die Frameworks nutzen.
+Es ist wichtig, dass die zu erweiternden Klassen wie zum Beispiel Ressourcen, Widgets usw.\ sich an das Liskov Substitution Principle halten.
+Ansonsten können Teile des Frameworks nicht mehr korrekt funktionieren.
+Die Bewertung auf Basis des Frameworks ist an dieser Stelle also nicht möglich, da die Verantwortlichkeit nicht beim Framework selbst liegt.
+Dieses Principle wird daher aus der Betrachtung entfernt.
 
 \newlineparagraph{Interface Segregation Principle}
 Wird im Prototyp dieses Principle befolgt?
@@ -69,7 +73,6 @@ In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass X
         \textbf{Principle}              & \textbf{Nova} & \textbf{filament} \\ \hline
         Single Responsibility Principle & 1             & 2                 \\ \hline
         Open Closed Principle           & 0             & 0                 \\ \hline
-        Liskov Substitution Principle   & X             & X                 \\ \hline
         Interface Segregation Principle & X             & X                 \\ \hline
         Dependency Inversion Principle  & X             & X                 \\ \hline
         KISS                            & X             & X                 \\ \hline
