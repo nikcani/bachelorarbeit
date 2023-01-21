@@ -24,9 +24,12 @@ Beide Frameworks setzten wie bereits erwähnt eher auf das MVC Pattern.
 Das PAC Pattern wird nicht eingesetzt, so wie bei webbasierter Software üblich.
 
 \subsubsection{View Handler}
-\color{red}
-Sind passende Probleme mit dem Pattern gelöst?
-\color{black}
+Wenn mehrere Instanzen der Anwendung unterschiedliche Ansichten zeigen sollen, so kann dieses Pattern zum Einsatz kommen.
+Beide Frameworks ermöglichen diese Funktionalität, implementieren diese aber nicht selbst.
+Nova und filament sind allerdings so gebaut, dass im Browser mehrere Tabs oder Fenster der Anwendung geöffnet werden können.
+Es gibt webbasierte Anwendungen, die durch mehrere geöffnete Instanzen Probleme mit der Session bekommen.
+Die betrachteten Frameworks ermöglichen allerdings, dass der Browser als View Handler zum Einsatz kommt.
+Dieses Pattern kann daher aus dem Vergleich gestrichen werden, da es zwar zum Einsatz kommt, allerdings in einer anderen Ebene.
 
 \subsubsection{Whole-Part}
 \color{red}
