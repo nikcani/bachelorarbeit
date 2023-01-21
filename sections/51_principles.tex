@@ -32,7 +32,12 @@ Filament setzt das Principle allerdings im Detail etwas besser um.
 
 \color{red}
 \newlineparagraph{Open Closed Principle}
-Wird im Prototyp dieses Principle befolgt?
+Die zu erweiternden Klassen von Nova und filament sind sehr offen für Veränderungen.
+Nahezu keine Methode ist final deklariert.
+Das führt dazu, dass auch Methoden überschrieben werden können, die eigentlich nicht angefasst werden sollten.
+Grundsätzlich sind notwendige Typen sinnvoll und umfangreich definiert.
+Es ist definitiv möglich, das Verhalten von Oberklassen in Unterklassen anzupassen.
+Allerdings sind beide Frameworks dabei zu offen gestaltet.
 
 \newlineparagraph{Liskov Substitution Principle}
 Wird im Prototyp dieses Principle befolgt?
@@ -63,7 +68,7 @@ In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass X
         \hline
         \textbf{Principle}              & \textbf{Nova} & \textbf{filament} \\ \hline
         Single Responsibility Principle & 1             & 2                 \\ \hline
-        Open Closed Principle           & X             & X                 \\ \hline
+        Open Closed Principle           & 0             & 0                 \\ \hline
         Liskov Substitution Principle   & X             & X                 \\ \hline
         Interface Segregation Principle & X             & X                 \\ \hline
         Dependency Inversion Principle  & X             & X                 \\ \hline
