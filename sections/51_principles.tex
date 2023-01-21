@@ -57,10 +57,23 @@ Dieses Principle wird von keinem Framework befolgt.
 Jede höhere Implementierung hängt direkt von einer niedrigeren ab.
 Es sind keine Interfaces zwischen als lose Kopplung zwischen die Ebenen geschaltet.
 
-\color{red}
 \subsubsection{KISS}
-Wird im Prototyp dieses Principle befolgt?
+Das KISS Prinzip wird von beiden Frameworks befolgt.
+Die Definition von Ressourcen sind in der Regel einfach.
+Nova setzt auf implizitere Definitionen.
+So werden beispielsweise Felder nur einmal definiert und gelten dann, gemäß definierter Annahmen, nicht nur für das Formular, sondern auch für die Tabellendarstellung.
+Bei filament muss alles wesentlich expliziter definiert werden, dies führt teilweise zu Code, der nicht unbedingt notwendig gewesen wäre.
 
+Bei Widgets zeigt sich das umgekehrte Bild.
+Aufgrund der unterschiedlichen Architekturen, bei filament Livewire und bei Nova Vue.js, sind unterschiedliche Setups notwendig.
+Bei filament lediglich eine einfache Klasse und eine Blade View.
+Nova hingegen benötigt einen Ordner mit mindestens 14 Dateien für jedes Widget.
+Jedes Widget ist eine eigenständige Vue Komponente, mit Abhängigkeiten und eigenen Backend Routen.
+Hinzukommt, dass Widgets gebaut werden müssen bei jeder Änderung.
+
+Insgesamt sind also beide Frameworks ähnlich simpel in ihrem Aufbau und der Art und Weise, wie damit gearbeitet wird.
+
+\color{red}
 \subsubsection{DRY}
 Wird im Prototyp dieses Principle befolgt?
 
@@ -81,7 +94,7 @@ In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass X
         Open Closed Principle           & 0             & 0                 \\ \hline
         Interface Segregation Principle & 1             & 1                 \\ \hline
         Dependency Inversion Principle  & 0             & 0                 \\ \hline
-        KISS                            & X             & X                 \\ \hline
+        KISS                            & 1             & 1                 \\ \hline
         DRY                             & X             & X                 \\ \hline
         YAGNI                           & X             & X                 \\ \hline
         \textbf{Summe}                  & \textbf{X}    & \textbf{X}        \\ \hline
