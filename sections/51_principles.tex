@@ -73,7 +73,6 @@ Hinzukommt, dass Widgets gebaut werden müssen bei jeder Änderung.
 
 Insgesamt sind also beide Frameworks ähnlich simpel in ihrem Aufbau und der Art und Weise, wie damit gearbeitet wird.
 
-\color{red}
 \subsubsection{DRY}
 Beide Frameworks ermöglichen es, Wiederholungen zu verhindern.
 Die Konfigurationen erfolgen vollständig in Code, meistens in Klassen.
@@ -84,10 +83,12 @@ Da zum Beispiel die Identifier eines Feldes an verschiedenen Stellen immer wiede
 Je Feld gibt es eine Klasse, das neben dem Identifier auch das Formularfeld, die Tabellenspalte, die Farbe und weitere Definitionen beinhaltet.
 
 \subsubsection{YAGNI}
-Wird im Prototyp dieses Principle befolgt?
+Sowohl Nova als auch filament benötigen keinen Code, der nur für die Zukunft ist.
+Erst wenn ein weiteres Feature benötigt wird, dann muss für Dieses Code geschrieben werden.
+Damit ist dieses Principle erfüllt und eine schnelle Entwicklung, beispielsweise im Sinne des Extreme Programming wird begünstigt.
 
 \subsubsection{Fazit}
-In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass XXX insgesamt besser bei der Umsetzung der Principles zu bewerten ist.
+In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass filament insgesamt etwas besser bei der Umsetzung der Principles zu bewerten ist.
 
 \begin{table}[]
     \caption{Bewertung Principles}
@@ -101,10 +102,8 @@ In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass X
         Interface Segregation Principle & 1             & 1                 \\ \hline
         Dependency Inversion Principle  & 0             & 0                 \\ \hline
         KISS                            & 1             & 1                 \\ \hline
-        DRY                             & X             & X                 \\ \hline
-        YAGNI                           & X             & X                 \\ \hline
-        \textbf{Summe}                  & \textbf{X}    & \textbf{X}        \\ \hline
+        DRY                             & 2             & 2                 \\ \hline
+        YAGNI                           & 2             & 2                 \\ \hline
+        \textbf{Summe}                  & \textbf{7}    & \textbf{8}        \\ \hline
     \end{tabular}
 \end{table}
-
-\color{black}
