@@ -30,7 +30,6 @@ Relationen werden durch sogenannte \enquote{Relation Manager} in einer eigenen K
 Nova trennt Verantwortlichkeiten grundsätzlich vernünftig, ein gutes Beispiel dafür sind die Widgets.
 Filament setzt das Principle allerdings im Detail etwas besser um.
 
-\color{red}
 \newlineparagraph{Open Closed Principle}
 Die zu erweiternden Klassen von Nova und filament sind sehr offen für Veränderungen.
 Nahezu keine Methode ist final deklariert.
@@ -54,8 +53,11 @@ Der zu implementierende Teil ist dabei allerdings stets überschaubar und auf da
 Grundsätzlich folgen beide Frameworks also dem Principle, allerdings nicht vollständig.
 
 \newlineparagraph{Dependency Inversion Principle}
-Wird im Prototyp dieses Principle befolgt?
+Dieses Principle wird von keinem Framework befolgt.
+Jede höhere Implementierung hängt direkt von einer niedrigeren ab.
+Es sind keine Interfaces zwischen als lose Kopplung zwischen die Ebenen geschaltet.
 
+\color{red}
 \subsubsection{KISS}
 Wird im Prototyp dieses Principle befolgt?
 
@@ -77,8 +79,8 @@ In der folgenden Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass X
         \textbf{Principle}              & \textbf{Nova} & \textbf{filament} \\ \hline
         Single Responsibility Principle & 1             & 2                 \\ \hline
         Open Closed Principle           & 0             & 0                 \\ \hline
-        Interface Segregation Principle & X             & X                 \\ \hline
-        Dependency Inversion Principle  & X             & X                 \\ \hline
+        Interface Segregation Principle & 1             & 1                 \\ \hline
+        Dependency Inversion Principle  & 0             & 0                 \\ \hline
         KISS                            & X             & X                 \\ \hline
         DRY                             & X             & X                 \\ \hline
         YAGNI                           & X             & X                 \\ \hline
