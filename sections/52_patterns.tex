@@ -41,6 +41,10 @@ Anhand des Prototyps lässt sich bei beiden Frameworks keine Aufteilung in Schic
 Die Anwendung ist allerdings auch recht überschaubar und eher auf einer Abstraktionsebene angesiedelt.
 Das Layers Pattern wird nicht verwendet.
 
+\subsubsection{Broker}
+Es gibt keine passende Probleme für dieses Pattern.
+Sowohl mit Nova als auch mit filament wird dieses Pattern nicht umgesetzt.
+
 \subsubsection{Publisher-Subscriber}
 Nova ermöglicht es JavaScript Komponenten, also vor allem den individuell entwickelten Cards/Tools, über einen Event Bus (\cite{nova-docs-events}) zu kommunizieren.
 Komponenten können bestimmte Events abonnieren oder Daten veröffentlichen.
@@ -50,11 +54,6 @@ Auch hier können bestimmte Events abonniert oder Daten veröffentlicht werden.
 Beide Frameworks verwenden das Pattern, auch wenn sie es anders benennen.
 Allerdings ist die Implementierung in beiden Fällen nicht wirklich umfangreich und eher ausbaufähig.
 Wünschenswert wäre eine Möglichkeit, die Kommunikation von jeder beliebigen Stelle aus zwischen verschiedenen Komponenten im Frontend und Backend zu ermöglichen.
-
-\subsubsection{Broker}
-\color{red}
-Sind passende Probleme mit dem Pattern gelöst?
-\color{black}
 
 \subsubsection{Proxy}
 \color{red}
