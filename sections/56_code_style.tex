@@ -1,8 +1,25 @@
 \subsection{Vergleich des Code Style}
+\newlineparagraph{PSR}
+Nova und filament basieren auf dem Framework Laravel.
+Laravel folgt laut eigenen Angaben beim Autoloading der aktuellen PSR-4, beim Coding Style allerdings der veralteten PSR-2 (\cite{laravel-docs-coding-style}).
+Weder Nova noch filament erwähnen einen Code Style in der jeweiligen Dokumentation.
+
+Filament scheint Laravel Pint (\cite{laravel-docs-pint}) zu verwenden, zumindest existiert im Projektrepository eine pint.json Datei mit der notwendigen Konfiguration.
+Darin wird als Vorlage der Stil von Laravel verwendet und leicht angepasst.
+An dieser Stelle wäre auch die PSR-12 möglich, filament scheint sich aber eher an dem Framework zu orientieren, auf dem es aufbaut.
+
+Bei Nova findet sich im Projektverzeichnis ebenfalls eine pint.json Datei mit der Laravel Vorlage.
+Dies ist auch erwartbar, da es sich bei Nova um ein first-party Package handelt.
+
+Zusammenfassend lässt sich also sagen, dass beide Frameworks sich nicht direkt an die aktuelle PSR halten, sondern an die Vorgaben von Laravel selbst.
+Die Laravel Standards basieren jedoch zumindest teilweise auf den PSR Standards.
+
+\newlineparagraph{Typisierung}
 \color{red}
-\begin{itemize}
-    \item PSR Compliance
-    \item Clean Code Literatur nach Robert Martin
-    \item Wie streng typisiert sind die Frameworks?
-\end{itemize}
+tbd
+\color{black}
+
+\newlineparagraph{Clean Code}
+\color{red}
+tbd
 \color{black}
