@@ -1,10 +1,11 @@
 \newpage
 
+
 \section{Analyse}
 Die Basis für den theoretischen Teil liefern die skizzierten Software Design Principles und Patterns.
 Im Rahmen der weiteren Analyse wird geklärt, welche Principles und Patterns im vorliegenden technischen Anwendungskontext grundsätzlich zur Anwendung kommen können.
 
-Die Basis für den praktischen Teil dieser Arbeit ist die auf Basis von Laravel und Nova entwickelte Sounding Console.
+Grundlage für den praktischen Teil dieser Arbeit ist die auf Basis von Laravel und Nova entwickelte Sounding Console.
 Um den Funktionsrahmen für den weiteren Prototypen zu definieren, sind zunächst die Probleme mit dem bestehenden MVP (Minimal Viable Product) zu identifizieren.
 
 Weiterhin bietet der jeweilige Funktionsumfang der Frameworks eine sinnvolle Vergleichsbasis.
@@ -14,16 +15,16 @@ Weitere mögliche Vergleichsaspekte sind die Maturity der beiden Frameworks, der
 Inwiefern diese Aspekte vergleichbar sind, ist ebenfalls Gegenstand dieser Analyse.
 
 \subsection{Geeignete Principles und Patterns}
-Die Auswahl der Principles und Patterns im Grundlagenteil dieser Arbeit erfolgte bereits begründet.
-Nicht jedes Pattern passt in jedem Kontext.
+Die Auswahl der Principles und Patterns im Grundlagenteil dieser Arbeit wurde bereits dargestellt:
+Nicht jedes Pattern passt in jeden Kontext.
 Im Folgenden wird begründet, warum die skizzierten Principles und Patterns im vorliegenden Projektkontext überprüft werden.
 
 \subsubsection{Geeignete Principles}
 Die Sounding Console folgt dem Konzept der objektorientierten Entwicklung.
-Dafür sind die SOLID Principles entworfen und daher im vorliegenden Projekt geeignet.
+Dafür sind die SOLID Principles entworfen und für das vorliegende Projekt anwendbar.
 
 Die Prinzipien KISS, DRY und YAGNI sind generell für unterschiedlichste Softwareprojekte konzipiert.
-Daher wird der Einsatz der Frameworks untersucht auf Einfachheit, Wiederholungen und vorbereitenden, aber nicht notwendigen Code.
+Daher wird der Einsatz der Frameworks untersucht auf Einfachheit, Wiederholungen und vorbereitenden, jedoch nicht notwendigen Code.
 
 Filament und Nova sind, abgesehen vom Frontend, in PHP geschrieben.
 Beim Einsatz der Frameworks wird fast ausschließlich PHP verwendet.
@@ -37,7 +38,7 @@ Es ist daher zu prüfen, ob dies der Fall ist oder ob PAC verwendet wird.
 Zusätzlich ist zu erkunden, ob das View Handler Pattern zum Einsatz kommt.
 
 Die Sounding Console besteht aus mehreren Komponenten.
-Es könnten daher einige als Whole-Part organisiert oder in Layer aufgeteilt sein, dies ist zu prüfen.
+Insofern könnten einige als Whole-Part organisiert oder in Layer aufgeteilt sein, dies ist zu untersuchen.
 Ebenfalls anwendbar für die Kommunikation zwischen Komponenten wäre das Publisher-Subscriber Pattern.
 Ob die Frameworks dieses Pattern ermöglichen, ist zu überprüfen.
 
@@ -45,12 +46,12 @@ Weitere mögliche Patterns im Bereich der Kommunikation zwischen Komponenten sin
 Es ist zu kontrollieren, ob diese Patterns unterstützt werden und zur Anwendung kommen.
 
 \subsubsection{Ungeeignete Patterns}
-Es gibt diverse Patterns, die in diesem Projekt zur Anwendung kommen, allerdings ungeeignet für den Vergleich sind.
+Es gibt diverse Patterns, die in diesem Projekt zur Anwendung kommen, die jedoch ungeeignet für den Vergleich sind.
 Das liegt daran, dass diese nicht in der Ebene von Nova oder filament liegen, sondern in der Ebene, in der Laravel arbeitet.
 So werden zum Beispiel viele Funktionen von Laravel als Facades~\cite{gamma-design-patterns} angeboten.
 Für die Datenmodelle gibt es beispielsweise Observer~\cite{gamma-design-patterns}, die dann unterschiedliche Funktionen aufrufen können, wenn sich ein Datensatz ändert.
 Diese beiden Patterns werden in der Sounding Console verwendet, allerdings sowohl mit Nova als auch mit filament.
-Daher sind diese Patterns nicht für einen Vergleich geeignet.
+Daher sind diese Patterns für einen Vergleich nicht hilfreich.
 
 \newpage
 
@@ -85,4 +86,4 @@ Außerdem wird die Tabelle kürzer während der Animation.
 Folglich springt die ganze Seite und erschwert so den Fokus des Users.
 
 Filament bietet das notwendige Feature ebenfalls.
-Es wird im Prototyp daher geprüft, ob die Animation besser umgesetzt ist.
+Im Prototyp wird deshalb geprüft, ob die Animation besser umgesetzt ist.

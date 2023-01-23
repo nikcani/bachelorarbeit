@@ -7,7 +7,7 @@ Im Gegensatz zum MVP mit Nova in der Praxisprojektarbeit, handelt es sich hier a
 Daher liegt der Fokus nicht auf der vollständigen Umsetzung aller Features.
 Dabei ist jedoch das bisherige Featureset der Sounding Console im neuen Prototyp nahezu vollumfänglich abgebildet.
 
-Der Fokus liegt insbesondere auf den Bereichen, die mit Nova eher problematisch waren, wie beispielsweise die Auswertung vergangener Flüge.
+Der Fokus des Prototypen lag insbesondere auf den Bereichen, die mit Nova eher problematisch waren, wie beispielsweise die Auswertung vergangener Flüge.
 
 \subsubsection{Positive Erfahrungen}
 Die Erfahrungen mit filament waren insgesamt sehr positiv.
@@ -15,7 +15,7 @@ Auch sind kleinere Aspekte in filament schöner umgesetzt.
 Ein Beispiel ist die Filterung von Tabellen.
 Ausgewählte Filter werden unmittelbar oberhalb der Tabelle dargestellt (\ref{fig:active_filter_filament}).
 Bei Nova versteckt sich dies erst hinter einem Klick in einem Popup (\ref{fig:active_filter_nova}).
-Mit diesen Funktionen wird die Handhabung deutlich vereinfacht.
+Mit solchen Funktionen wird die Handhabung deutlich vereinfacht.
 
 \color{lightgray}
 \begin{figure}[h!]
@@ -39,18 +39,18 @@ Mit diesen Funktionen wird die Handhabung deutlich vereinfacht.
 Manche Ansichten benötigen weitreichende Anpassungen.
 Hierzu zählt speziell der Blick auf einen vergangenen Flug.
 Bei laufenden Flügen wird lediglich ein Dashboard mit aktuellen Werten und eine Karte angezeigt.
-Beides passt sinnvoll oberhalb der restlichen Komponenten der Ressource, den Stammdatenfeldern und der Messwertetabelle.
+Beides lässt sich sinnvoll oberhalb der restlichen Komponenten der Ressource, den Stammdatenfeldern und der Messwertetabelle, platzieren.
 
 Im Fall von vergangenen Flügen fällt das Dashboard weg, jedoch kommen ein Messdatendiagramm, eine Statistikübersicht und ein Skew-T-Diagramm hinzu.
-Insgesamt sind das zu viele und zu große Komponenten, um diese direkt oberhalb auf der Seite zu platzieren.
+Insgesamt sind das zu viele und zu große Komponenten, um sie unmittelbar oberhalb auf der Seite zu platzieren.
 Ein User müsste viel scrollen, um alles zu erfassen.
 Dies wäre unübersichtlich und ineffizient.
 
 Nova bietet kaum Möglichkeiten eine Ansicht anzupassen.
 Daher war es die beste Variante, die Komponenten in Unterpunkte auszulagern (\ref{fig:finished_flight_nova}).
-Nova unterstützt sogenannte Tools, welche eigenständige Seiten sind, auf denen individuelle Komponenten implementiert werden können.
+Nova unterstützt sogenannte Tools, welche eigenständige Seiten sind und auf denen individuelle Komponenten implementiert werden können.
 Außerdem kann kontextabhängig das Menü angepasst werden.
-Tests erster Nutzer zeigten allerdings, dass die entworfene Navigationsstruktur zu unübersichtlich ist.
+Tests erster Nutzer zeigten jedoch, dass die entworfene Navigationsstruktur zu unübersichtlich ist.
 
 \newpage
 
@@ -69,7 +69,7 @@ Innerhalb dieser individuellen View kann dann eine Tab View implementiert werden
 Die Lösung mit filament überzeugt durch eine deutlich bessere User Experience.
 Die komplizierte Navigationsstruktur im Menü entfällt komplett und alles findet direkt innerhalb der Flugansicht statt.
 Längeres Scrollen entfällt und die Ansicht bleibt kompakt und übersichtlich.
-Filament überzeugt durch die flexible und umfangreiche Anpassbarkeit.
+Insofern überzeugt filament an dieser Stelle durch die flexible und umfangreiche Anpassbarkeit.
 
 \begin{figure}[h!]
     \centering
@@ -81,7 +81,7 @@ Filament überzeugt durch die flexible und umfangreiche Anpassbarkeit.
 \newpage
 
 \newlineparagraph{Generelle Anpassbarkeit}
-Filament punktet, durch eine generell flexiblere Anpassbarkeit, beispielsweise die Styles lassen sich besser anpassen.
+Filament punktet insgesamt, durch eine flexiblere Anpassbarkeit, beispielsweise die Styles lassen sich besser modifizieren.
 Des Weiteren gibt es die Möglichkeit, an vielen Stellen individuelle Views einzuhängen.
 
 \newlineparagraph{Ladeanimation der aktualisierenden Tabelle}
@@ -91,12 +91,12 @@ Insgesamt ist die User Experience durch diese Animation bei filament wesentlich 
 
 \newlineparagraph{Livewire Polling (Flight Dashboard Component)}
 Filament basiert auf Livewire\cite{livewire} und somit können innerhalb einer individuellen Komponente auch Funktionen von Livewire genutzt werden.
-So gibt es einen eingebauten Polling Mechanismus.
-Man fügt lediglich ein Attribut zu einem HTML Objekt hinzu und Livewire ruft dieses in einem definierbaren Intervall erneut vom Server ab.
+Beispielsweise gibt es einen eingebauten Polling Mechanismus.
+Es muss lediglich ein Attribut zu einem HTML Objekt hinzugefügt werden und Livewire ruft dieses in einem definierbaren Intervall erneut vom Server ab.
 
-So wurde die Implementierung des Dashboards eines laufenden Fluges vereinfacht.
-Die Api und manuelles Polling mit anschließendem Austausch der Datenbasis, sodass Vue.js den Inhalt dann reaktiv updaten kann, werden nicht mehr benötigt.
-Es muss nur innerhalb der Blade Komponente mit serverseitigem Code das Dashboard generiert werden und Livewire übernimmt den Rest vollautomatisch.
+Auf diese Weise wurde die Implementierung des Dashboards eines laufenden Fluges vereinfacht.
+Die Api und das manuelle Polling mit anschließendem Austausch der Datenbasis, damit Vue.js den Inhalt dann reaktiv updaten kann, werden nicht mehr benötigt.
+Es muss lediglich innerhalb der Blade Komponente mit serverseitigem Code das Dashboard generiert werden und Livewire übernimmt den Rest vollautomatisch.
 
 \newpage
 
@@ -126,7 +126,7 @@ Das Livewire Polling Konzept ist nicht immer von Vorteil.
 Bei einfachen Komponenten ist es sinnvoll, bei komplexeren Komponenten wie zum Beispiel der Karte, ist es problematisch.
 Mit Nova war die Umsetzung etwas einfacher, da individuelle Nova Komponenten bereits eine geschützte HTTP Api vorbereiten, über die Updates regelmäßig abgerufen werden können.
 Das Polling der gesamten Komponente ist mit filament keine Option, dennoch müssen Veränderungen erkannt und automatisch angezeigt werden.
-Durch das Attribut \enquote{wire:ignore} können allerdings einzelne Bestandteile ausgenommen werden.
+Durch das Attribut \enquote{wire:ignore} können dabei einzelne Bestandteile ausgenommen werden.
 So wird die Karte und das dazugehörige Script nicht erneut geladen, sondern nur ein Teil, welcher bei einem Update ein Event aussendet, auf welches die Karte dann reagiert.
 
 \newpage

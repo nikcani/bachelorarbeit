@@ -9,7 +9,7 @@ Sie wurden empirisch beobachtet und gelten meistens, allerdings nicht zwingend.
 
 \subsubsection{SOLID Principles}
 Die Kerngruppe der Software Design Prinzipien werden von Robert C. Martin unter dem Titel \enquote{The Principles of OOD}\cite{solid} beschrieben.
-Die Grundlage dafür legte er in seinem Paper \enquote{Design Principles and Design Patterns}\cite{design-principles-and-design-patterns} im Jahr 2000.
+Die Grundlage dafür legte er in seiner Veröffentlichung \enquote{Design Principles and Design Patterns}\cite{design-principles-and-design-patterns} im Jahr 2000.
 
 \newlineparagraph{Single Responsibility Principle}
 \enquote{A class should have one, and only one, reason to change.}\cite{solid}
@@ -22,7 +22,7 @@ Größere Klassen nachzuvollziehen ist komplexer und aufwändiger, Änderungen w
 \enquote{You should be able to extend a classes' behavior, without modifying it.}\cite{solid}
 Fertige Klassen sollten nicht mehr verändert werden, lediglich Bugs sollten behoben werden.
 Allerdings sollte es immer möglich sein, die Funktionalität zu erweitern.
-Dafür ist es wichtig, dass die Klassen so entworfen sind, dass Unterklassen die Funktionalität durch Overwrites nicht einschränken können.
+Deshalb ist es wesentlich, dass die Klassen so entworfen sind, dass Unterklassen die Funktionalität durch Overwrites nicht einschränken können.
 Dafür ist es erforderlich, relevante Typen zu definieren und wichtige und finale Methoden auch als solche zu markieren, damit diese nicht mehr verändert werden können.
 (Vgl.~\cite{different-types-of-software-design-principles})
 
@@ -44,7 +44,7 @@ Dies vereinfacht sowohl den Einsatz von Interfaces, als auch die Wartung des Cod
 
 \newlineparagraph{Dependency Inversion Principle}
 \enquote{Depend on abstractions, not on concretions.}\cite{solid}
-Für eine möglichst lose Kopplung zwischen konkreten Klassen sollte man sich auf Interfaces und abstrakte Klassen verlassen.
+Für eine möglichst lose Kopplung zwischen konkreten Klassen sollten Interfaces und abstrakte Klassen eingesetzt werden.
 So wird eine flexiblere Codebase ermöglicht.
 Module aus höheren Abstraktionsebenen sollten keine Module von niedrigeren Ebenen importieren.
 Die lose Kopplung wird erreicht, wenn zwischen den unterschiedlichen Ebenen abstrakte Interfaces anstatt konkreter Implementierungen genutzt werden.

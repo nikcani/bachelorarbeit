@@ -4,9 +4,9 @@ In beiden Dokumentationen ist allerdings eine Möglichkeit für Komponenten zur 
 Alle weiteren Patterns bzw.\ deren Verwendung sind anhand des Prototyps zu prüfen.
 
 \subsubsection{MVC}
-Würde die Sounding Console mit Laravel individuell entwickelt werden, so würde sehr wahrscheinlich dieses Pattern zum Einsatz kommen.
-Laravel bereitet Models, Views und Controller bereits vor und ermöglicht deren komfortable Nutzung.
-Beim Einsatz von Nova und filament fällt allerdings der Controller weitestgehend weg.
+Würde die Sounding Console mit Laravel individuell entwickelt werden, so würde voraussichtlich dieses Pattern zum Einsatz kommen.
+Denn Laravel bereitet Models, Views und Controller bereits vor und ermöglicht deren komfortable Nutzung.
+Beim Einsatz von Nova und filament fällt jedoch der Controller weitestgehend weg.
 Auch die View, welche klassischerweise in irgendeiner Form HTML enthalten würde, wird neu gedacht.
 Die Frameworks ermöglichen Definitionen von Ressourcen und weiteren Features.
 Die daraus resultierenden Views werden durch die Frameworks selbst gerendert und die notwendigen Funktionen eines Controllers sind ebenfalls bereits abgedeckt.
@@ -17,28 +17,28 @@ Nova nutzt bei Cards bzw.\ Tools View in Vue.js und hängt dazwischen eine Klass
 
 Das MVC Pattern wird also nur in Teilen umgesetzt.
 Dies ist allerdings von Vorteil, da zentrales Feature beider Frameworks die Vereinfachung der Ressourcenverwaltung ist.
-Daher sollen auch kaum bis keine Controller und klassischen Views implementiert werden, da dies mehr Zeit in Anspruch nehmen würde.
+Deshalb sollen auch kaum bis keine Controller und klassischen Views implementiert werden, da dies mehr Zeit in Anspruch nehmen würde.
 
 \subsubsection{PAC}
-Beide Frameworks setzten wie bereits erwähnt eher auf das MVC Pattern.
+Beide Frameworks setzten wie bereits erwähnt auf das MVC Pattern.
 Das PAC Pattern wird nicht eingesetzt, so wie bei webbasierter Software üblich.
 
 \subsubsection{View Handler}
 Wenn mehrere Instanzen der Anwendung unterschiedliche Ansichten zeigen sollen, so kann dieses Pattern zum Einsatz kommen.
-Beide Frameworks ermöglichen diese Funktionalität, implementieren sie aber nicht selbst.
-Nova und filament sind allerdings so gebaut, dass im Browser mehrere Tabs oder Fenster der Anwendung geöffnet werden können.
+Beide Frameworks ermöglichen diese Funktionalität, implementieren sie jedoch nicht selbst.
+Nova und filament sind dabei so gebaut, dass im Browser mehrere Tabs oder Fenster der Anwendung geöffnet werden können.
 Es gibt webbasierte Anwendungen, die durch mehrere geöffnete Instanzen Probleme mit der Session bekommen.
 Die betrachteten Frameworks ermöglichen jedoch, dass der Browser als View Handler zum Einsatz kommt.
-Dieses Pattern kann daher aus dem Vergleich gestrichen werden, da es zwar zum Einsatz kommt, allerdings in einer anderen Ebene.
+Dieses Pattern kann deshalb aus dem Vergleich gestrichen werden, da es zwar zum Einsatz kommt, allerdings in einer anderen Ebene.
 
 \subsubsection{Whole-Part}
 Bei beiden Frameworks ist keine Organisation nach diesem Pattern zu erkennen.
 In der Regel kann auf jede Komponente direkt zugegriffen werden.
-Semantische Einheiten, bei denen sich dieses Pattern anbieten würde, liegen im aktuellen Projekt auch nicht vor.
+Semantische Einheiten, bei denen sich dieses Pattern anbieten würde, liegen im aktuellen Projekt nicht vor.
 
 \subsubsection{Layers}
 Anhand des Prototyps lässt sich bei beiden Frameworks keine Aufteilung in Schichten erkennen.
-Die Anwendung ist allerdings auch recht überschaubar und eher auf einer Abstraktionsebene angesiedelt.
+Die Anwendung ist an dieser Stelle sehr überschaubar gehalten und eher auf einer Abstraktionsebene angesiedelt.
 Das Layers Pattern wird nicht verwendet.
 
 \subsubsection{Broker}
@@ -53,8 +53,8 @@ Komponenten können bestimmte Events abonnieren oder Daten veröffentlichen.
 Filament ermöglicht Formularen über Events~\cite{filament-docs-events} mit dem Backend zu kommunizieren.
 Auch hier können bestimmte Events abonniert oder Daten veröffentlicht werden.
 
-Beide Frameworks verwenden das Pattern, auch wenn sie es anders benennen.
-Allerdings ist die Implementierung in beiden Fällen nicht wirklich umfangreich und eher ausbaufähig.
+Beide Frameworks verwenden das Pattern, auch wenn sie es jeweils anders benennen.
+Dabei ist die Implementierung in beiden Fällen nicht sehr umfangreich und noch ausbaufähig.
 Wünschenswert wäre eine Möglichkeit, die Kommunikation von jeder beliebigen Stelle aus zwischen verschiedenen Komponenten im Frontend und Backend zu ermöglichen.
 
 \subsubsection{Proxy}
@@ -62,6 +62,7 @@ Dieses Pattern ist bei beiden Frameworks nicht umgesetzt.
 Es gibt auch keine passenden Probleme, für die ein Proxy geeignet wäre.
 
 \subsubsection{Fazit}
+Für die vollständige Anwendung eines Patterns gibt es zwei Punkte, für die teilweise Anwendung einen Punkt.
 Anhand der Tabelle~\ref{tab:bewertung-patterns} ist ersichtlich, dass beide Frameworks die Patterns gleich stark einsetzen.
 Es lässt sich kein Unterschied feststellen.
 

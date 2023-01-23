@@ -11,20 +11,20 @@ So sind Datenbankspalten bzw.\ Model Attribute Formularfeldern zugeordnet.
 Auch Relationen zu anderen Models sind anzugeben.
 Ebenso erfolgt eine Zuordnung zu Tabellenspalten.
 Welche Widgets zusätzlich in der UI einer Ressource gerendert werden, wird ebenfalls definiert.
-Außerdem gibt es weitere Einstellungen wie zum Beispiel die Zusammensetzung des Titels einer Ressource oder Filteroptionen.
+Außerdem gibt es weitere Einstellungen wie zum Beispiel die Zusammensetzung des Titels einer Ressource oder die Filteroptionen.
 
 Bei Nova erfolgen alle diese Definitionen in einer Klasse.
 Grundsätzlich ist dies als eine Verantwortlichkeit im Sinne des Single Responsibility Principle aufzufassen, jedoch fallen auch schnell Hürden dieser Aufgabenbündelung auf.
 So werden zum Beispiel auf unterschiedlichen Seiten einer Ressource, beispielsweise Index und Detail, auch verschiedene Widgets angezeigt.
-Bei Nova müssen die unterschiedlichen Fälle dafür in einer Methode geprüft werden und dynamisch definiert werden.
+Bei Nova müssen die unterschiedlichen Fälle dafür in einer Methode geprüft und dynamisch definiert werden.
 
-Filament löst die Verantwortlichkeiten besser.
+Filament löst diese Verantwortlichkeiten besser.
 So gibt es für die üblichen vier Unterseiten einer Ressource, aber auch für zusätzliche, je eine eigene Klasse.
 Diese regeln die Anzeige der jeweiligen Widgets und die Anzeige von Aktionsschaltflächen.
-Es können aber auch je Unterseite weitere Konfigurationen erfolgen, wie zum Beispiel ein angepasstes Formular.
-Möglich ist zudem eine standardisierte Unterseite vollständig durch eine individuelle zu ersetzen.
+Es können zudem je Unterseite weitere Konfigurationen erfolgen, wie zum Beispiel ein angepasstes Formular.
+Möglich ist weiterhin eine standardisierte Unterseite vollständig durch eine individuelle zu ersetzen.
 
-Filament lagert zusätzlich eine weitere Verantwortlichkeit aus.
+Filament lagert darüber hinaus eine weitere Verantwortlichkeit aus.
 Relationen werden durch sogenannte \enquote{Relation Manager} in einer eigenen Klasse verwaltet und in der zentralen Ressource lediglich referenziert.
 
 Ein gutes Beispiel dafür, wie Nova schon im Grundsatz Verantwortlichkeiten trennt, sind die Widgets.
@@ -35,21 +35,21 @@ Die zu erweiternden Klassen von Nova und filament sind sehr offen für Veränder
 Nahezu keine Methode ist final deklariert.
 Das führt dazu, dass auch Methoden überschrieben werden können, die eigentlich nicht angefasst werden sollten.
 Grundsätzlich sind notwendige Typen sinnvoll und umfangreich definiert.
-Es ist definitiv möglich, das Verhalten von Oberklassen in Unterklassen anzupassen, allerdings sind beide Frameworks dabei zu offen gestaltet.
+Es ist definitiv möglich, das Verhalten von Oberklassen in Unterklassen anzupassen, allerdings sind beide Frameworks an dieser Stelle zu offen gestaltet.
 
 \newlineparagraph{Liskov Substitution Principle}
 Dieses Principle betrifft Erweiterungen und damit im Kontext der Frameworks den Teil, für den Entwickler zuständig sind, welche die Frameworks nutzen.
 Es ist wichtig, dass die zu erweiternden Klassen wie zum Beispiel Ressourcen, Widgets usw.\ sich an das Liskov Substitution Principle halten.
 Ansonsten können Teile des Frameworks nicht mehr korrekt funktionieren.
 Die Bewertung auf Basis des Frameworks ist an dieser Stelle also nicht möglich, da die Verantwortlichkeit nicht beim Framework selbst liegt.
-Dieses Principle wird daher aus der Betrachtung entfernt.
+Vor diesem Hintergrund wird dieses Principle aus der weiteren Betrachtung entfernt.
 
 \newlineparagraph{Interface Segregation Principle}
 Beide Frameworks arbeiten intern mit Interfaces.
 Nach außen hin werden diese allerdings nicht genutzt.
 In der Regel wird ein Feature implementiert, indem eine abstrakte Klasse erweitert wird.
-Der zu implementierende Teil ist dabei allerdings stets überschaubar und auf das Nötigste beschränkt.
-Grundsätzlich folgen beide Frameworks also dem Principle, jedoch nicht vollständig.
+Der zu implementierende Teil ist dabei jedoch stets überschaubar und auf das Nötigste beschränkt.
+Grundsätzlich folgen beide Frameworks also dem Principle, wenn auch nicht vollständig.
 
 \newlineparagraph{Dependency Inversion Principle}
 Dieses Principle wird von keinem Framework befolgt.
@@ -57,7 +57,7 @@ Jede höhere Implementierung hängt direkt von einer niedrigeren ab.
 Es sind keine Interfaces als lose Kopplung zwischen die Ebenen geschaltet.
 
 \subsubsection{KISS}
-Das KISS Prinzip wird von beiden Frameworks befolgt.
+Das KISS Prinzip wird von beiden Frameworks weitgehend befolgt.
 Die Definition von Ressourcen sind in der Regel einfach.
 Nova setzt auf implizite Definitionen.
 So werden beispielsweise Felder nur einmal definiert und gelten dann, gemäß definierter Annahmen, nicht nur für das Formular, sondern auch für die Tabellendarstellung.
@@ -78,15 +78,16 @@ Die Konfigurationen erfolgen vollständig in Code, meistens in Klassen.
 Dadurch ist es möglich, Oberklassen zu erstellen, die wiederkehrende Konfigurationen an einer Stelle bündeln.
 
 Auch andere Optionen sind möglich.
-Da zum Beispiel die Identifier eines Feldes an verschiedenen Stellen immer wieder verwendet werden, sind diese im Prototypen in eigene Klassen ausgelagert.
+Da beispielsweise die Identifier eines Feldes an verschiedenen Stellen immer wieder verwendet werden, sind diese im Prototypen in eigene Klassen ausgelagert.
 Je Feld gibt es eine Klasse, die neben dem Identifier auch das Formularfeld, die Tabellenspalte, die Farbe und weitere Definitionen beinhaltet.
 
 \subsubsection{YAGNI}
-Sowohl Nova als auch filament benötigen keinen Code, der nur für die Zukunft ist.
-Erst wenn ein weiteres Feature benötigt wird, dann muss dafür Code geschrieben werden.
-Damit ist dieses Principle erfüllt und eine schnelle Entwicklung, beispielsweise im Sinne des Extreme Programming wird begünstigt.
+Sowohl Nova als auch filament benötigen keinen Code, der nur für die Zukunft gedacht ist.
+Erst wenn ein weiteres Feature benötigt wird, muss hierfür Code geschrieben werden.
+Damit ist dieses Principle erfüllt und eine schnelle Entwicklung, nicht zuletzt im Sinne des Extreme Programming wird begünstigt.
 
 \subsubsection{Fazit}
+Für die vollständige Anwendung eines Prinzips gibt es zwei Punkte, für die teilweise Anwendung einen Punkt.
 In der Tabelle~\ref{tab:bewertung-principles} wird ersichtlich, dass filament insgesamt etwas besser bei der Umsetzung der Principles zu bewerten ist.
 
 \begin{table}[h!]
