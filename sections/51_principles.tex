@@ -8,13 +8,13 @@ Eine der wichtigsten Verantwortlichkeiten, die beide Frameworks übernehmen, ist
 Es wird in beiden Fällen ein Model, welches Daten aus der Datenbank Objekten in PHP zuordnet, als Basis für eine Ressource verwendet.
 Damit das jeweilige Framework eine passende UI rendern kann, müssen unterschiedliche Definitionen erfolgen:
 So sind Datenbankspalten bzw.\ Model Attribute Formularfeldern zugeordnet.
-Auch Relationen zu anderen Model sind anzugeben.
+Auch Relationen zu anderen Models sind anzugeben.
 Ebenso erfolgt eine Zuordnung zu Tabellenspalten.
 Welche Widgets zusätzlich in der UI einer Ressource gerendert werden, wird ebenfalls definiert.
 Außerdem gibt es weitere Einstellungen wie zum Beispiel die Zusammensetzung des Titels einer Ressource oder Filteroptionen.
 
 Bei Nova erfolgen alle diese Definitionen in einer Klasse.
-Grundsätzlich kann man dies als eine Verantwortlichkeit im Sinne des Single Responsibility Principle auffassen, jedoch fallen auch schnell Hürden dieser Aufgabenbündelung auf.
+Grundsätzlich ist dies als eine Verantwortlichkeit im Sinne des Single Responsibility Principle aufzufassen, jedoch fallen auch schnell Hürden dieser Aufgabenbündelung auf.
 So werden zum Beispiel auf unterschiedlichen Seiten einer Ressource, beispielsweise Index und Detail, auch verschiedene Widgets angezeigt.
 Bei Nova müssen die unterschiedlichen Fälle dafür in einer Methode geprüft werden und dynamisch definiert werden.
 
@@ -22,12 +22,12 @@ Filament löst die Verantwortlichkeiten besser.
 So gibt es für die üblichen vier Unterseiten einer Ressource, aber auch für zusätzliche, je eine eigene Klasse.
 Diese regeln die Anzeige der jeweiligen Widgets und die Anzeige von Aktionsschaltflächen.
 Es können aber auch je Unterseite weitere Konfigurationen erfolgen, wie zum Beispiel ein angepasstes Formular.
-Möglich ist auch, eine standardisierte Unterseite vollständig durch eine individuelle zu ersetzen.
+Möglich ist zudem eine standardisierte Unterseite vollständig durch eine individuelle zu ersetzen.
 
 Filament lagert zusätzlich eine weitere Verantwortlichkeit aus.
-Relationen werden durch sogenannte \enquote{Relation Manager} in einer eigenen Klasse verwaltet und in der zentralen Resource lediglich referenziert.
+Relationen werden durch sogenannte \enquote{Relation Manager} in einer eigenen Klasse verwaltet und in der zentralen Ressource lediglich referenziert.
 
-Nova trennt Verantwortlichkeiten grundsätzlich vernünftig, ein gutes Beispiel dafür sind die Widgets.
+Ein gutes Beispiel dafür, wie Nova schon im Grundsatz Verantwortlichkeiten trennt, sind die Widgets.
 Filament setzt das Principle allerdings im Detail etwas besser um.
 
 \newlineparagraph{Open Closed Principle}
@@ -35,8 +35,7 @@ Die zu erweiternden Klassen von Nova und filament sind sehr offen für Veränder
 Nahezu keine Methode ist final deklariert.
 Das führt dazu, dass auch Methoden überschrieben werden können, die eigentlich nicht angefasst werden sollten.
 Grundsätzlich sind notwendige Typen sinnvoll und umfangreich definiert.
-Es ist definitiv möglich, das Verhalten von Oberklassen in Unterklassen anzupassen.
-Allerdings sind beide Frameworks dabei zu offen gestaltet.
+Es ist definitiv möglich, das Verhalten von Oberklassen in Unterklassen anzupassen, allerdings sind beide Frameworks dabei zu offen gestaltet.
 
 \newlineparagraph{Liskov Substitution Principle}
 Dieses Principle betrifft Erweiterungen und damit im Kontext der Frameworks den Teil, für den Entwickler zuständig sind, welche die Frameworks nutzen.
@@ -50,12 +49,12 @@ Beide Frameworks arbeiten intern mit Interfaces.
 Nach außen hin werden diese allerdings nicht genutzt.
 In der Regel wird ein Feature implementiert, indem eine abstrakte Klasse erweitert wird.
 Der zu implementierende Teil ist dabei allerdings stets überschaubar und auf das Nötigste beschränkt.
-Grundsätzlich folgen beide Frameworks also dem Principle, allerdings nicht vollständig.
+Grundsätzlich folgen beide Frameworks also dem Principle, jedoch nicht vollständig.
 
 \newlineparagraph{Dependency Inversion Principle}
 Dieses Principle wird von keinem Framework befolgt.
 Jede höhere Implementierung hängt direkt von einer niedrigeren ab.
-Es sind keine Interfaces zwischen als lose Kopplung zwischen die Ebenen geschaltet.
+Es sind keine Interfaces als lose Kopplung zwischen die Ebenen geschaltet.
 
 \subsubsection{KISS}
 Das KISS Prinzip wird von beiden Frameworks befolgt.
@@ -65,11 +64,11 @@ So werden beispielsweise Felder nur einmal definiert und gelten dann, gemäß de
 Bei filament muss alles wesentlich expliziter definiert werden, dies führt teilweise zu Code, der nicht unbedingt notwendig gewesen wäre.
 
 Bei Widgets zeigt sich das umgekehrte Bild.
-Aufgrund der unterschiedlichen Architekturen, bei filament Livewire und bei Nova Vue.js, sind unterschiedliche Setups notwendig.
-Bei filament lediglich eine einfache Klasse und eine Blade View.
+Aufgrund der unterschiedlichen Architekturen, bei Nova Vue.js und bei filament Livewire, sind unterschiedliche Setups notwendig.
+Bei filament genügt dafür eine Klasse und eine Blade View.
 Nova hingegen benötigt einen Ordner mit mindestens 14 Dateien für jedes Widget.
 Jedes Widget ist eine eigenständige Vue Komponente, mit Abhängigkeiten und eigenen Backend Routen.
-Hinzukommt, dass Widgets gebaut werden müssen bei jeder Änderung.
+Hinzukommt, dass Widgets bei jeder Änderung gebaut werden müssen.
 
 Insgesamt sind also beide Frameworks ähnlich simpel in ihrem Aufbau und der Art und Weise, wie damit gearbeitet wird.
 
@@ -80,11 +79,11 @@ Dadurch ist es möglich, Oberklassen zu erstellen, die wiederkehrende Konfigurat
 
 Auch andere Optionen sind möglich.
 Da zum Beispiel die Identifier eines Feldes an verschiedenen Stellen immer wieder verwendet werden, sind diese im Prototypen in eigene Klassen ausgelagert.
-Je Feld gibt es eine Klasse, das neben dem Identifier auch das Formularfeld, die Tabellenspalte, die Farbe und weitere Definitionen beinhaltet.
+Je Feld gibt es eine Klasse, die neben dem Identifier auch das Formularfeld, die Tabellenspalte, die Farbe und weitere Definitionen beinhaltet.
 
 \subsubsection{YAGNI}
 Sowohl Nova als auch filament benötigen keinen Code, der nur für die Zukunft ist.
-Erst wenn ein weiteres Feature benötigt wird, dann muss für Dieses Code geschrieben werden.
+Erst wenn ein weiteres Feature benötigt wird, dann muss dafür Code geschrieben werden.
 Damit ist dieses Principle erfüllt und eine schnelle Entwicklung, beispielsweise im Sinne des Extreme Programming wird begünstigt.
 
 \subsubsection{Fazit}

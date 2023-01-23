@@ -7,7 +7,7 @@ Alle weiteren Patterns bzw.\ deren Verwendung sind anhand des Prototyps zu prüf
 Würde die Sounding Console mit Laravel individuell entwickelt werden, so würde sehr wahrscheinlich dieses Pattern zum Einsatz kommen.
 Laravel bereitet Models, Views und Controller bereits vor und ermöglicht deren komfortable Nutzung.
 Beim Einsatz von Nova und filament fällt allerdings der Controller weitestgehend weg.
-Auch die View, welche klassischerweise in irgendeiner Form HTMl enthalten würde, wird neu gedacht.
+Auch die View, welche klassischerweise in irgendeiner Form HTML enthalten würde, wird neu gedacht.
 Die Frameworks ermöglichen Definitionen von Ressourcen und weiteren Features.
 Die daraus resultierenden Views werden durch die Frameworks selbst gerendert und die notwendigen Funktionen eines Controllers sind ebenfalls bereits abgedeckt.
 
@@ -15,7 +15,7 @@ Eine Ausnahme bilden Widgets bei filament und Cards bzw.\ Tools bei Nova.
 Bei filament gibt es, neben einer klassischen Blade View, eine Klasse für das Widget, die Aufgaben eines Controllers übernimmt.
 Nova nutzt bei Cards bzw.\ Tools View in Vue.js und hängt dazwischen eine Klasse und API Routen, die Funktionen eines Controllers übernehmen können.
 
-Das MVC Pattern wird als nur in Teilen umgesetzt.
+Das MVC Pattern wird also nur in Teilen umgesetzt.
 Dies ist allerdings von Vorteil, da zentrales Feature beider Frameworks die Vereinfachung der Ressourcenverwaltung ist.
 Daher sollen auch kaum bis keine Controller und klassischen Views implementiert werden, da dies mehr Zeit in Anspruch nehmen würde.
 
@@ -28,7 +28,7 @@ Wenn mehrere Instanzen der Anwendung unterschiedliche Ansichten zeigen sollen, s
 Beide Frameworks ermöglichen diese Funktionalität, implementieren diese aber nicht selbst.
 Nova und filament sind allerdings so gebaut, dass im Browser mehrere Tabs oder Fenster der Anwendung geöffnet werden können.
 Es gibt webbasierte Anwendungen, die durch mehrere geöffnete Instanzen Probleme mit der Session bekommen.
-Die betrachteten Frameworks ermöglichen allerdings, dass der Browser als View Handler zum Einsatz kommt.
+Die betrachteten Frameworks ermöglichen jedoch, dass der Browser als View Handler zum Einsatz kommt.
 Dieses Pattern kann daher aus dem Vergleich gestrichen werden, da es zwar zum Einsatz kommt, allerdings in einer anderen Ebene.
 
 \subsubsection{Whole-Part}

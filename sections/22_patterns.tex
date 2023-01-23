@@ -2,7 +2,7 @@
 
 \subsection{Patterns}
 Patterns, sogenannte Entwurfsmuster, wurden ursprünglich vom Architekten Christopher Alexander geprägt.
-Dieser beschrieb in seinem Buch \enquote{A Pattern Language: Towns, Buildings, Construction}\cite{a-pattern-language} im Jahr 1977 zum ersten Mal Muster, unter dessen Einsatz sich wiederkehrende Probleme lösen lassen.
+Dieser beschrieb in seinem Buch \enquote{A Pattern Language: Towns, Buildings, Construction}\cite{a-pattern-language} im Jahr 1977 zum ersten Mal Muster, unter deren Einsatz sich wiederkehrende Probleme lösen lassen.
 In der Informatik wurden Entwurfsmuster durch die Veröffentlichung der \enquote{Gang of Four} im Jahr 1994 populärer.
 In ihrem Buch \enquote{Design Patterns - Elements of Reusable Object-Oriented Software}\cite{gamma-design-patterns} beschreiben Erich Gamma et al.\ 23 unterschiedliche Entwurfsmuster.
 Diese sind eingeteilt in die drei Kategorien Creational, Structural und Behavioral.
@@ -49,7 +49,7 @@ Außerdem werden die einzelnen Angelegenheiten voneinander getrennt und sowohl d
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
 \subsubsection{Layers}
-Wenn die Unteraufgaben einer Applikation in unterschiedlichen Abstraktionsebenen liegen, so kann man die Applikation in Layers (übersetzt: Ebenen) aufteilen.
+Wenn die Unteraufgaben einer Applikation in unterschiedlichen Abstraktionsebenen liegen, so kann die Applikation in Layers (übersetzt: Ebenen) aufgeteilt werden.
 Ein Layer interagiert immer nur mit dem direkt untergeordneten Layer.
 Für den nächsten übergeordneten Layer werden Dienste bereitgestellt.
 Von Vorteil ist, dass Abhängigkeiten in der Regel nur in einem Layer liegen.
@@ -64,7 +64,7 @@ Im Falle eines Updates benachrichtigt er diese über Art und Inhalt der Verände
 (Vgl.~\cite{buschmann-pattern-oriented-software-architecture})
 
 \subsubsection{Broker}
-Liegen in einem System unabhängige aber kooperierende Komponenten vor, so kann man diese mittels eines Brokers koppeln.
+Liegen in einem System unabhängige aber kooperierende Komponenten vor, so können diese mittels eines Brokers gekoppelt werden.
 Der Broker koordiniert die Kommunikation zwischen den einzelnen Komponenten.
 So leitet er Anfragen weiter und überträgt Ergebnisse und Fehlermeldungen.
 Von Vorteil ist, dass anfragende Komponenten nicht wissen müssen, wo und wie sie Dienste erreichen und vice versa.

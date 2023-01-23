@@ -5,10 +5,9 @@ Die neue Variante ist mit dem Präfix \enquote{/admin} in der Route aufrufbar.
 
 Im Gegensatz zum MVP mit Nova in der Praxisprojektarbeit, handelt es sich hier allerdings um einen reinen Prototyp.
 Daher liegt der Fokus nicht auf der vollständigen Umsetzung aller Features.
-Dabei ist jedoch das bisherige Featureset der Sounding Console im neuen Prototyp nahezu vollständig abgebildet.
+Dabei ist jedoch das bisherige Featureset der Sounding Console im neuen Prototyp nahezu vollumfänglich abgebildet.
 
-Der Fokus liegt insbesondere auf den Bereichen, die mit Nova eher problematisch waren.
-So zum Beispiel die Auswertung vergangener Flüge.
+Der Fokus liegt insbesondere auf den Bereichen, die mit Nova eher problematisch waren, wie beispielsweise die Auswertung vergangener Flüge.
 
 \subsubsection{Positive Erfahrungen}
 Die Erfahrungen mit filament waren insgesamt sehr positiv.
@@ -82,20 +81,18 @@ Filament überzeugt durch die flexible und umfangreiche Anpassbarkeit.
 \newpage
 
 \newlineparagraph{Generelle Anpassbarkeit}
-Filament punktet, durch eine generell flexiblere Anpassbarkeit.
-Die Styles lassen sich besser anpassen.
+Filament punktet, durch eine generell flexiblere Anpassbarkeit, beispielsweise die Styles lassen sich besser anpassen.
 Des Weiteren gibt es die Möglichkeit, an vielen Stellen individuelle Views einzuhängen.
 
 \newlineparagraph{Ladeanimation der aktualisierenden Tabelle}
 Filament zeigt keine Ladeanimation an, wenn die Tabelle neue Daten pollt.
-Dadurch ist ein einfacher Vergleich der Werte möglich und die Seite springt nicht.
-Die Seite springt nur, wenn neue Einträge hinzukommen.
+Dadurch ist ein einfacher Vergleich der Werte möglich und die Seite springt nicht, außer es kommen neue Einträge hinzu.
 Insgesamt ist die User Experience durch diese Animation bei filament wesentlich besser als bei Nova.
 
 \newlineparagraph{Livewire Polling (Flight Dashboard Component)}
 Filament basiert auf Livewire\cite{livewire} und somit können innerhalb einer individuellen Komponente auch Funktionen von Livewire genutzt werden.
 So gibt es einen eingebauten Polling Mechanismus.
-Man fügt lediglich ein Attribut zu einem HTMl Objekt hinzu und Livewire ruft dieses in einem definierbaren Intervall erneut vom Server ab.
+Man fügt lediglich ein Attribut zu einem HTML Objekt hinzu und Livewire ruft dieses in einem definierbaren Intervall erneut vom Server ab.
 
 So wurde die Implementierung des Dashboards eines laufenden Fluges vereinfacht.
 Die Api und manuelles Polling mit anschließendem Austausch der Datenbasis, sodass Vue.js den Inhalt dann reaktiv updaten kann, wird nicht mehr benötigt.
@@ -122,7 +119,7 @@ Das Problem mit Nova wird, durch diese implementierte Lösung, vollständig gel�
 
 \subsubsection{Negative Erfahrungen}
 Trotz aller positiven Erfahrungen gab es auch eine Hürde mit filament, welche im Folgenden erläutert ist.
-Diese konnte allerdings überwunden werden, es musste lediglich auf ein neues Konzept umgestellt werden.
+Diese konnte allerdings, mit der Umstellung auf ein neues Konzept, überwunden werden.
 
 \newlineparagraph{Livewire Polling (Map Component)}
 Das Livewire Polling Konzept ist nicht immer von Vorteil.
@@ -153,8 +150,8 @@ Dies lässt sich jedoch umgehen, indem die Tabelle aus der Ressource referenzier
 Die unterschiedlichen Ansätze haben ihre Vor- und Nachteile.
 Der implizite Ansatz bei Nova ist schneller, insbesondere am Anfang.
 Filaments explizite Definitionen benötigen initial mehr Zeit, überzeugen aber am Ende durch eine bessere und einfachere Anpassbarkeit.
-Zudem ist es durchaus sinnvoll, explizit zu formulieren, wie die Felder im Formular und wie sie in Tabellen dargestellt werden sollen.
-So wird verhindert, dass unerwartete Fälle eintreten, da mindestens einmal während der Entwicklung durchdacht werden muss, wie jeder Fall explizit definiert wird.
+Zudem ist es durchaus sinnvoll explizit zu formulieren, wie die Felder im Formular und wie sie in Tabellen dargestellt werden sollen.
+So wird verhindert, dass unerwartete Fälle eintreten, da die explizite Definition jedes Falls während der Entwicklung, mindestens einmal durchdacht werden muss.
 
 \begin{figure}[h!]
     \centering

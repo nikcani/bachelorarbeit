@@ -39,14 +39,14 @@ Neue Exceptions dürfen nur genutzt werden, wenn sie Subklassen der Exceptions s
 Interfaces sollten genau wie Klassen möglichst spezifisch sein.
 Diese Theorie zielt darauf, dass die implementierenden Klassen nicht gegen das Single Responsibility Principle verstoßen.
 Durch kleinere Interfaces müssen die implementierenden Klassen auch nur wesentliche Funktionen implementieren.
-Dies vereinfach sowohl den Einsatz von Interfaces, als auch die Wartung des Codes.
+Dies vereinfacht sowohl den Einsatz von Interfaces, als auch die Wartung des Codes.
 (Vgl.~\cite{design-patterns-php-laravel})
 
 \newlineparagraph{Dependency Inversion Principle}
 \enquote{Depend on abstractions, not on concretions.}\cite{solid}
 Für eine möglichst lose Kopplung zwischen konkreten Klassen sollte man sich auf Interfaces und abstrakte Klassen verlassen.
 So wird eine flexiblere Codebase ermöglicht.
-Module aus höheren Abstraktionsebenen sollten nichts von niedrigeren Ebenen importieren.
+Module aus höheren Abstraktionsebenen sollten keine Module von niedrigeren Ebenen importieren.
 Die lose Kopplung wird erreicht, wenn zwischen den unterschiedlichen Ebenen abstrakte Interfaces anstatt konkreter Implementierungen genutzt werden.
 (Vgl.~\cite{design-patterns-php-laravel})
 
@@ -76,7 +76,7 @@ Ist lediglich vorhersehbar, dass eine gewisse Funktion notwendig sein wird, soll
 (Vgl.~\cite{extreme-programming-installed})
 
 Dieser Grundsatz wurde im Bereich des Extreme Programming geprägt.
-Seine Begründung sieht er darin, dass es sich nur selten lohnt, für zukünftige Anforderungen zu entwickeln.
+Seine Begründung beruht darauf, dass es sich nur selten lohnt, für zukünftige Anforderungen zu entwickeln.
 (Vgl.~\cite{kiss-principle-explained})
 
 \subsubsection{PSR (PHP Standards Recommendations)}
